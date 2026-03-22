@@ -7,7 +7,7 @@ const portfolioData = {
     phone: "01620925191",
     location: "Nikunja-2, Khilkhet, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
-    linkedin: "",
+    linkedin: "",  // Add your LinkedIn URL here, e.g. "https://linkedin.com/in/your-profile"
     avatar: "img/me.jpeg" // put image URL or relative path e.g. "assets/me.jpg"
   },
 
@@ -45,7 +45,7 @@ const portfolioData = {
     {
       icon: "fas fa-lock",
       title: "Auth & Security",
-      description: "Laravel Sanctum, Passport, role-based access control (Spatie), OTP/2FA, rate limiting, and CSRF/XSS protection."
+      description: "Laravel Sanctum, Passport, JWT, role-based access control (Spatie), OTP/2FA, rate limiting, and CSRF/XSS protection."
     },
     {
       icon: "fas fa-tachometer-alt",
@@ -162,29 +162,18 @@ const portfolioData = {
   // 3. Add each one below — they will appear as clickable cards that open the PDF
   // "cover" is optional: put a preview image path or leave ""
   portfolioDocs: [
-    {
-      title: "Breast Cancer Prediction Research",
-      description: "ML research using 6 algorithms on the WDBC dataset. Comparative analysis of accuracy, precision, and recall.",
-      file: "portfolio/breast-cancer-research.pdf",
-      cover: "",
-      tags: ["Python", "Machine Learning", "Research"]
-    },
-    {
-      title: "Raeno ERP – Technical Documentation",
-      description: "Full technical documentation including architecture, DB schema, module breakdown, and API reference.",
-      file: "portfolio/raeno-erp-docs.pdf",
-      cover: "",
-      tags: ["Laravel", "ERP", "Documentation"]
-    },
+    // Add more documents here as:
+    // { title: "...", description: "...", file: "portfolio/xxx.pdf", cover: "", tags: ["..."] }
     {
       title: "CV – Md Shahadat Hossain",
       description: "My latest curriculum vitae including education, work experience, skills, and notable projects.",
       file: "portfolio/CV.pdf",
-      cover: "img/test.jpg",
+      cover: "img/me.jpeg",
       tags: ["CV", "Resume"]
     }
-    // ADD MORE:
-    // { title: "...", description: "...", file: "portfolio/xxx.pdf", cover: "", tags: ["..."] }
+    // Uncomment and fill in when you have the files ready:
+    // { title: "Breast Cancer Prediction Research", description: "ML research using 6 algorithms on the WDBC dataset.", file: "portfolio/breast-cancer-research.pdf", cover: "", tags: ["Python", "Machine Learning", "Research"] },
+    // { title: "Raeno ERP – Technical Documentation", description: "Full technical documentation including architecture, DB schema, and API reference.", file: "portfolio/raeno-erp-docs.pdf", cover: "", tags: ["Laravel", "ERP", "Documentation"] }
   ],
 
   // ── SKILLS ──────────────────────────────────────────────────────────────────
@@ -195,7 +184,7 @@ const portfolioData = {
       "Form Requests", "Observers", "Events & Listeners", "Laravel Mix / Vite"
     ],
     "Authentication & Security": [
-      "Laravel Sanctum", "Laravel Passport", "Spatie Permissions",
+      "Laravel Sanctum", "Laravel Passport", "JWT", "Spatie Permissions",
       "Role-Based Access Control", "OTP / 2FA", "Rate Limiting",
       "CSRF Protection", "XSS Prevention", "Input Validation"
     ],

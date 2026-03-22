@@ -4,26 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio – Md Shahadat Hossain</title>
+  <meta name="description" content="Laravel Developer portfolio of Md Shahadat Hossain — building scalable web apps, REST APIs, ERP systems & VPS-deployed solutions." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link href="style.css" rel="stylesheet"/>
+
+  <meta property="og:title" content="Md Shahadat Hossain – Laravel Developer" />
+  <meta property="og:description" content="Laravel developer building scalable web apps, REST APIs, ERP systems & VPS-deployed solutions." />
+  <meta property="og:image" content="img/me.jpeg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
+
+<div id="preloader">
+  <div class="pre-inner">
+    <span class="pre-brand">SH.</span>
+    <div class="pre-bar"></div>
+  </div>
+</div>
+
+<div id="scroll-progress"></div>
+<a id="back-top" href="#hero" title="Back to top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- ── NAVBAR ── -->
 <nav id="navbar">
   <div class="container d-flex align-items-center justify-content-between">
-    <a class="nav-brand" href="#hero"><span>&lt;</span>SHS<span>/&gt;</span></a>
-    <div class="nav-links">
-      <a class="nav-lnk" href="#services">Services</a>
-      <a class="nav-lnk" href="#experience">Experience</a>
-      <a class="nav-lnk" href="#projects">Projects</a>
-      <a class="nav-lnk" href="#portfolio-docs">Portfolio</a>
-      <a class="nav-lnk" href="#skills">Skills</a>
-      <a class="nav-lnk" href="#education">Education</a>
-      <a class="nav-lnk" href="#contact">Contact</a>
+    <a class="nav-brand" href="#hero">SH.</a>
+    <div class="nav-links" id="nav-links">
+      <a class="nav-lnk" href="#services"       data-section="services">Services</a>
+      <a class="nav-lnk" href="#experience"     data-section="experience">Experience</a>
+      <a class="nav-lnk" href="#projects"       data-section="projects">Projects</a>
+      <a class="nav-lnk" href="#portfolio-docs" data-section="portfolio-docs">Portfolio</a>
+      <a class="nav-lnk" href="#skills"         data-section="skills">Skills</a>
+      <a class="nav-lnk" href="#education"      data-section="education">Education</a>
+      <a class="nav-lnk" href="#contact"        data-section="contact">Contact</a>
     </div>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -34,11 +54,12 @@
       <div class="col-lg-7 order-2 order-lg-1">
         <div class="hero-tag"><span class="dot"></span> Available for opportunities</div>
         <h1 class="hero-name" id="hero-name">Loading…</h1>
-        <p class="hero-role" id="hero-role"></p>
+        <p class="hero-role">* <span id="typed-text"></span><span class="typed-cursor">|</span></p>
         <p class="hero-bio" id="hero-bio"></p>
         <div class="d-flex flex-wrap gap-3 mb-4 hero-btns">
-          <a href="#projects" class="btn-p"><i class="fas fa-briefcase"></i> View Projects</a>
-          <a href="#contact" class="btn-o"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+          <a href="#projects"        class="btn-p"><i class="fas fa-briefcase"></i> View Projects</a>
+          <a href="portfolio/CV.pdf" class="btn-o" target="_blank" rel="noopener noreferrer"><i class="fas fa-download"></i> Download CV</a>
+          <a href="#contact"         class="btn-ghost"><i class="fas fa-paper-plane"></i> Get In Touch</a>
         </div>
         <div class="social-links" id="social-links"></div>
       </div>
@@ -132,11 +153,32 @@
 
 <footer id="footer"></footer>
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="data.js"></script>
 <script>
-/* ────────── HELPERS ────────── */
-function fadeUp(el){ el.classList.add('fu') }
+/* ────────── PRELOADER ────────── */
+window.addEventListener('load', () => {
+  const pre = document.getElementById('preloader')
+  if (!pre) return
+  pre.classList.add('pre-hidden')
+  setTimeout(() => { pre.style.display = 'none' }, 600)
+})
+
+/* ────────── SCROLL PROGRESS ────────── */
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('scroll-progress')
+  if (!el) return
+  const scrollTop  = window.scrollY
+  const docHeight  = document.documentElement.scrollHeight - window.innerHeight
+  el.style.width   = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%'
+}, { passive: true })
+
+/* ────────── BACK TO TOP ────────── */
+window.addEventListener('scroll', () => {
+  const bt = document.getElementById('back-top')
+  if (bt) bt.classList.toggle('visible', window.scrollY > 400)
+}, { passive: true })
 
 /* ────────── HERO ────────── */
 function initHero(d){
@@ -145,25 +187,34 @@ function initHero(d){
   const first = parts.slice(0,-1).join(' ')
   const last  = parts.slice(-1)[0]
   document.getElementById('hero-name').innerHTML = first + ' <span class="acc">' + last + '</span>'
-  document.getElementById('hero-role').textContent = '* ' + p.title
   document.getElementById('hero-bio').textContent = p.tagline
   document.title = 'Portfolio – ' + p.name
 
+  new Typed('#typed-text', {
+    strings: ['Laravel Developer', 'Backend Engineer', 'Full Stack Developer', 'API Developer', 'PHP Developer'],
+    typeSpeed: 55,
+    backSpeed: 30,
+    backDelay: 2000,
+    startDelay: 400,
+    loop: true,
+    showCursor: false
+  })
+
   const av = document.getElementById('hero-avatar')
   if(p.avatar){
-    av.innerHTML = '<img src="'+p.avatar+'" alt="'+p.name+'">'
+    av.innerHTML = '<img src="'+p.avatar+'" alt="'+p.name+'" loading="eager">'
   } else {
     av.textContent = p.name.split(' ').map(w=>w[0]).slice(0,2).join('')
   }
 
   const links = [
     {href:'mailto:'+p.email, icon:'fas fa-envelope', label:'Email'},
-    {href:'tel:'+p.phone,   icon:'fas fa-phone',    label:'Phone'},
+    {href:'tel:'+p.phone,    icon:'fas fa-phone',    label:'Phone'},
     p.github   ? {href:p.github,   icon:'fab fa-github',   label:'GitHub'}   : null,
     p.linkedin ? {href:p.linkedin, icon:'fab fa-linkedin', label:'LinkedIn'} : null,
   ].filter(Boolean)
   document.getElementById('social-links').innerHTML = links.map(l=>
-    `<a href="${l.href}" class="soc-lnk" title="${l.label}" target="_blank"><i class="${l.icon}"></i></a>`
+    `<a href="${l.href}" class="soc-lnk" title="${l.label}" target="_blank" rel="noopener noreferrer"><i class="${l.icon}"></i></a>`
   ).join('')
 }
 
@@ -201,8 +252,8 @@ function initProjects(d){
         <div class="p-title">${p.title}</div>
         <div class="p-desc">${p.description}</div>
         <div class="p-links">
-          ${p.live ? `<a href="${p.live}" class="p-lnk" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>` : ''}
-          ${p.repo ? `<a href="${p.repo}" class="p-lnk" target="_blank"><i class="fab fa-github"></i> Code</a>` : ''}
+          ${p.live ? `<a href="${p.live}" class="p-lnk" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live</a>` : ''}
+          ${p.repo ? `<a href="${p.repo}" class="p-lnk" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>` : ''}
         </div>
       </div>
     </div>`).join('')
@@ -210,18 +261,23 @@ function initProjects(d){
 
 /* ────────── PORTFOLIO DOCS ────────── */
 function initDocs(d){
-  document.getElementById('docs-grid').innerHTML = d.portfolioDocs.map(doc=>`
+  const validDocs = d.portfolioDocs.filter(doc => doc.file && doc.file.trim() !== '')
+  if (!validDocs.length) {
+    document.getElementById('portfolio-docs').style.display = 'none'
+    return
+  }
+  document.getElementById('docs-grid').innerHTML = validDocs.map(doc=>`
     <div class="col-md-6 col-lg-4 fu">
       <div class="gc d-flex flex-column">
         <div class="doc-cover">
           ${doc.cover
-            ? `<img src="${doc.cover}" alt="${doc.title}">`
+            ? `<img src="${doc.cover}" alt="${doc.title}" loading="lazy">`
             : `<i class="fas fa-file-pdf"></i>`}
         </div>
         <div class="p-tags">${doc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
         <div class="doc-title">${doc.title}</div>
         <div class="doc-desc">${doc.description}</div>
-        <a href="${doc.file}" class="doc-open" target="_blank">
+        <a href="${doc.file}" class="doc-open" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-eye"></i> View PDF
         </a>
       </div>
@@ -258,11 +314,12 @@ function initContact(d){
   const items = [
     {href:'mailto:'+p.email, icon:'fas fa-envelope',      label:'Email',    val:p.email},
     {href:'tel:'+p.phone,    icon:'fas fa-phone',          label:'Phone',    val:p.phone},
-    {href:'#',               icon:'fas fa-map-marker-alt', label:'Location', val:p.location},
-    p.github ? {href:p.github, icon:'fab fa-github', label:'GitHub', val:'Shahadat-Hossain-Shanto'} : null,
+    {href:'#',               icon:'fas fa-map-marker-alt', label:'Location', val:p.location, self:true},
+    p.github   ? {href:p.github,   icon:'fab fa-github',   label:'GitHub',   val:'Shahadat-Hossain-Shanto'} : null,
+    p.linkedin ? {href:p.linkedin, icon:'fab fa-linkedin', label:'LinkedIn', val:p.linkedin} : null,
   ].filter(Boolean)
   document.getElementById('contact-list').innerHTML = items.map(i=>`
-    <a href="${i.href}" class="c-item" target="_blank">
+    <a href="${i.href}" class="c-item" ${i.self ? '' : 'target="_blank" rel="noopener noreferrer"'}>
       <div class="c-icon"><i class="${i.icon}"></i></div>
       <div>
         <div class="c-label">${i.label}</div>
@@ -275,7 +332,7 @@ function initContact(d){
 /* ────────── FOOTER ────────── */
 function initFooter(d){
   document.getElementById('footer').innerHTML =
-    `© ${new Date().getFullYear()} ${d.personal.name} &nbsp;·&nbsp; Built with HTML, CSS & Bootstrap`
+    `&copy; ${new Date().getFullYear()} ${d.personal.name} &nbsp;&middot;&nbsp; Built with HTML, CSS &amp; Bootstrap`
 }
 
 /* ────────── SCROLL OBSERVER ────────── */
@@ -291,9 +348,44 @@ function initObserver(){
   document.querySelectorAll('.fu').forEach(el=>obs.observe(el))
 }
 
+/* ────────── ACTIVE NAV ON SCROLL ────────── */
+function initActiveNav(){
+  const sections = document.querySelectorAll('section[id]')
+  const links    = document.querySelectorAll('.nav-lnk[data-section]')
+  function setActive(){
+    let current = ''
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 100
+      if(window.scrollY >= top) current = sec.getAttribute('id')
+    })
+    links.forEach(lnk => {
+      lnk.classList.toggle('active', lnk.dataset.section === current)
+    })
+  }
+  window.addEventListener('scroll', setActive, {passive:true})
+  setActive()
+}
+
+/* ────────── BURGER MENU ────────── */
+function initBurger(){
+  const burger = document.getElementById('nav-burger')
+  const links  = document.getElementById('nav-links')
+  if(!burger) return
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open')
+    links.classList.toggle('mobile-open')
+  })
+  links.querySelectorAll('.nav-lnk').forEach(l => {
+    l.addEventListener('click', () => {
+      burger.classList.remove('open')
+      links.classList.remove('mobile-open')
+    })
+  })
+}
+
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40)
-})
+},{ passive:true })
 
 /* ────────── BOOT ────────── */
 document.addEventListener('DOMContentLoaded',()=>{
@@ -308,6 +400,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   initContact(d)
   initFooter(d)
   setTimeout(initObserver, 120)
+  initActiveNav()
+  initBurger()
 })
 </script>
 </body>
