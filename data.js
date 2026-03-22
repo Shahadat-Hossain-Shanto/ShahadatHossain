@@ -8,7 +8,7 @@ const portfolioData = {
     location: "Nikunja-2, Khilkhet, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
     linkedin: "",
-    avatar: "" // put image URL or relative path e.g. "assets/me.jpg"
+    avatar: "img/me.jpeg" // put image URL or relative path e.g. "assets/me.jpg"
   },
 
   services: [
@@ -55,31 +55,46 @@ const portfolioData = {
   ],
 
   experiences: [
-    {
-      role: "Software Engineer (Laravel)",
-      company: "Inovex Idea Solution Limited",
-      location: "Middle-Badda, Dhaka",
-      period: "January 2025 – Present",
-      type: "Full-time",
-      points: [
-        "Developing and maintaining scalable web applications using Laravel, MySQL, JavaScript, AJAX, jQuery, HTML, CSS, and Bootstrap.",
-        "Collaborating with teams to deliver efficient, user-friendly solutions.",
-        "Implementing database structures, optimizing queries, and ensuring application performance.",
-        "Contributing to full-stack development, from frontend UI to backend logic and VPS deployment."
-      ]
-    },
-    {
-      role: "Software Engineer Internship (Laravel)",
-      company: "Inovex Idea Solution Limited",
-      location: "Middle-Badda, Dhaka",
-      period: "July 2024 – December 2024",
-      type: "Internship",
-      points: [
-        "Contributed to developing multiple web applications using Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript, AJAX, and jQuery.",
-        "Collaborated with a team to build responsive, user-friendly interfaces.",
-        "Gained hands-on experience in full-stack development, database management, and debugging."
-      ]
-    }
+      {
+        role: "Laravel Developer",
+        company: "Softvence Delta",
+        location: "Dhaka, Bangladesh",
+        period: "December 2025 – Present",
+        type: "Full-time",
+        points: [
+          "Developing and maintaining scalable Laravel applications with clean, well-structured MVC architecture.",
+          "Building and consuming RESTful APIs integrated with mobile and third-party platforms.",
+          "Designing normalized database schemas, writing optimized queries, and managing migrations and seeders.",
+          "Implementing role-based access control, authentication (Sanctum/Passport), and application security best practices.",
+          "Deploying and managing applications on VPS — configuring Nginx, SSL (Let's Encrypt), Supervisor, and UFW firewall.",
+          "Collaborating with frontend and mobile teams to deliver seamless, user-focused features on schedule."
+        ]
+      },
+      {
+        role: "Software Engineer (Laravel)",
+        company: "Inovex Idea Solution Limited",
+        location: "Middle-Badda, Dhaka",
+        period: "January 2025 – November 2025",
+        type: "Full-time",
+        points: [
+          "Developing and maintaining scalable web applications using Laravel, MySQL, JavaScript, AJAX, jQuery, HTML, CSS, and Bootstrap.",
+          "Collaborating with teams to deliver efficient, user-friendly solutions.",
+          "Implementing database structures, optimizing queries, and ensuring application performance.",
+          "Contributing to full-stack development, from frontend UI to backend logic and VPS deployment."
+        ]
+      },
+      {
+        role: "Software Engineer Internship (Laravel)",
+        company: "Inovex Idea Solution Limited",
+        location: "Middle-Badda, Dhaka",
+        period: "July 2024 – December 2024",
+        type: "Internship",
+        points: [
+          "Contributed to developing multiple web applications using Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript, AJAX, and jQuery.",
+          "Collaborated with a team to build responsive, user-friendly interfaces.",
+          "Gained hands-on experience in full-stack development, database management, and debugging."
+        ]
+      }
   ],
 
   projects: [
