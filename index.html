@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – Md Shahadat Hossain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a class="nav-brand" href="#hero"><span>&lt;</span>SHS<span>/&gt;</span></a>
+    <div class="nav-links">
+      <a class="nav-lnk" href="#services">Services</a>
+      <a class="nav-lnk" href="#experience">Experience</a>
+      <a class="nav-lnk" href="#projects">Projects</a>
+      <a class="nav-lnk" href="#portfolio-docs">Portfolio</a>
+      <a class="nav-lnk" href="#skills">Skills</a>
+      <a class="nav-lnk" href="#education">Education</a>
+      <a class="nav-lnk" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7 order-2 order-lg-1">
+        <div class="hero-tag"><span class="dot"></span> Available for opportunities</div>
+        <h1 class="hero-name" id="hero-name">Loading…</h1>
+        <p class="hero-role" id="hero-role"></p>
+        <p class="hero-bio" id="hero-bio"></p>
+        <div class="d-flex flex-wrap gap-3 mb-4 hero-btns">
+          <a href="#projects" class="btn-p"><i class="fas fa-briefcase"></i> View Projects</a>
+          <a href="#contact" class="btn-o"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+        </div>
+        <div class="social-links" id="social-links"></div>
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2 text-center">
+        <div class="hero-avatar" id="hero-avatar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="container">
+    <p class="sec-label">What I Do</p>
+    <h2 class="sec-title">Services</h2>
+    <div class="sec-divider"></div>
+    <div class="row g-4" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="container">
+    <p class="sec-label">Work History</p>
+    <h2 class="sec-title">Experience</h2>
+    <div class="sec-divider"></div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="timeline" id="exp-timeline"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="container">
+    <p class="sec-label">My Work</p>
+    <h2 class="sec-title">Projects</h2>
+    <div class="sec-divider"></div>
+    <div class="row g-4" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO DOCS ── -->
+<section id="portfolio-docs">
+  <div class="container">
+    <p class="sec-label">Documents & Research</p>
+    <h2 class="sec-title">Portfolio</h2>
+    <div class="sec-divider"></div>
+    <div class="row g-4" id="docs-grid"></div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="container">
+    <p class="sec-label">Tech Stack</p>
+    <h2 class="sec-title">Skills</h2>
+    <div class="sec-divider"></div>
+    <div class="row g-4" id="skills-grid"></div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="container">
+    <p class="sec-label">Academic Background</p>
+    <h2 class="sec-title">Education</h2>
+    <div class="sec-divider"></div>
+    <div class="row g-4" id="edu-grid"></div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <p class="sec-label">Let's Connect</p>
+        <h2 class="sec-title">Get In Touch</h2>
+        <div class="sec-divider"></div>
+        <p style="color:var(--muted);line-height:1.8;font-size:.95rem;">
+          Open to discussing new projects, interesting ideas, or opportunities. Feel free to reach out!
+        </p>
+      </div>
+      <div class="col-lg-6 offset-lg-1" id="contact-list"></div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="data.js"></script>
+<script>
+/* ────────── HELPERS ────────── */
+function fadeUp(el){ el.classList.add('fu') }
+
+/* ────────── HERO ────────── */
+function initHero(d){
+  const p = d.personal
+  const parts = p.name.split(' ')
+  const first = parts.slice(0,-1).join(' ')
+  const last  = parts.slice(-1)[0]
+  document.getElementById('hero-name').innerHTML = first + ' <span class="acc">' + last + '</span>'
+  document.getElementById('hero-role').textContent = '* ' + p.title
+  document.getElementById('hero-bio').textContent = p.tagline
+  document.title = 'Portfolio – ' + p.name
+
+  const av = document.getElementById('hero-avatar')
+  if(p.avatar){
+    av.innerHTML = '<img src="'+p.avatar+'" alt="'+p.name+'">'
+  } else {
+    av.textContent = p.name.split(' ').map(w=>w[0]).slice(0,2).join('')
+  }
+
+  const links = [
+    {href:'mailto:'+p.email, icon:'fas fa-envelope', label:'Email'},
+    {href:'tel:'+p.phone,   icon:'fas fa-phone',    label:'Phone'},
+    p.github   ? {href:p.github,   icon:'fab fa-github',   label:'GitHub'}   : null,
+    p.linkedin ? {href:p.linkedin, icon:'fab fa-linkedin', label:'LinkedIn'} : null,
+  ].filter(Boolean)
+  document.getElementById('social-links').innerHTML = links.map(l=>
+    `<a href="${l.href}" class="soc-lnk" title="${l.label}" target="_blank"><i class="${l.icon}"></i></a>`
+  ).join('')
+}
+
+/* ────────── SERVICES ────────── */
+function initServices(d){
+  document.getElementById('services-grid').innerHTML = d.services.map(s=>`
+    <div class="col-md-6 col-lg-3 fu">
+      <div class="gc">
+        <div class="svc-icon"><i class="${s.icon}"></i></div>
+        <div class="svc-title">${s.title}</div>
+        <div class="svc-desc">${s.description}</div>
+      </div>
+    </div>`).join('')
+}
+
+/* ────────── EXPERIENCE ────────── */
+function initExp(d){
+  document.getElementById('exp-timeline').innerHTML = d.experiences.map(e=>`
+    <div class="exp-item fu">
+      <div class="exp-dot"></div>
+      <span class="exp-badge">${e.type}</span>
+      <div class="exp-role">${e.role}</div>
+      <div class="exp-co">${e.company}</div>
+      <div class="exp-meta">${e.location} &nbsp;·&nbsp; ${e.period}</div>
+      <ul class="exp-pts">${e.points.map(p=>`<li>${p}</li>`).join('')}</ul>
+    </div>`).join('')
+}
+
+/* ────────── PROJECTS ────────── */
+function initProjects(d){
+  document.getElementById('projects-grid').innerHTML = d.projects.map(p=>`
+    <div class="col-md-6 col-lg-4 fu">
+      <div class="gc d-flex flex-column">
+        <div class="p-tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <div class="p-title">${p.title}</div>
+        <div class="p-desc">${p.description}</div>
+        <div class="p-links">
+          ${p.live ? `<a href="${p.live}" class="p-lnk" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>` : ''}
+          ${p.repo ? `<a href="${p.repo}" class="p-lnk" target="_blank"><i class="fab fa-github"></i> Code</a>` : ''}
+        </div>
+      </div>
+    </div>`).join('')
+}
+
+/* ────────── PORTFOLIO DOCS ────────── */
+function initDocs(d){
+  document.getElementById('docs-grid').innerHTML = d.portfolioDocs.map(doc=>`
+    <div class="col-md-6 col-lg-4 fu">
+      <div class="gc d-flex flex-column">
+        <div class="doc-cover">
+          ${doc.cover
+            ? `<img src="${doc.cover}" alt="${doc.title}">`
+            : `<i class="fas fa-file-pdf"></i>`}
+        </div>
+        <div class="p-tags">${doc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <div class="doc-title">${doc.title}</div>
+        <div class="doc-desc">${doc.description}</div>
+        <a href="${doc.file}" class="doc-open" target="_blank">
+          <i class="fas fa-eye"></i> View PDF
+        </a>
+      </div>
+    </div>`).join('')
+}
+
+/* ────────── SKILLS ────────── */
+function initSkills(d){
+  document.getElementById('skills-grid').innerHTML = Object.entries(d.skills).map(([g,items])=>`
+    <div class="col-md-6 col-lg-4 fu">
+      <div class="gc">
+        <div class="skill-group-title">${g}</div>
+        <div class="skill-pills">${items.map(s=>`<span class="s-pill">${s}</span>`).join('')}</div>
+      </div>
+    </div>`).join('')
+}
+
+/* ────────── EDUCATION ────────── */
+function initEdu(d){
+  document.getElementById('edu-grid').innerHTML = d.education.map(e=>`
+    <div class="col-md-6 col-lg-4 fu">
+      <div class="gc">
+        <div class="edu-year">${e.year}</div>
+        <div class="edu-deg">${e.degree}</div>
+        <div class="edu-inst">${e.institution}</div>
+        <div class="edu-res">${e.result}</div>
+      </div>
+    </div>`).join('')
+}
+
+/* ────────── CONTACT ────────── */
+function initContact(d){
+  const p = d.personal
+  const items = [
+    {href:'mailto:'+p.email, icon:'fas fa-envelope',      label:'Email',    val:p.email},
+    {href:'tel:'+p.phone,    icon:'fas fa-phone',          label:'Phone',    val:p.phone},
+    {href:'#',               icon:'fas fa-map-marker-alt', label:'Location', val:p.location},
+    p.github ? {href:p.github, icon:'fab fa-github', label:'GitHub', val:'Shahadat-Hossain-Shanto'} : null,
+  ].filter(Boolean)
+  document.getElementById('contact-list').innerHTML = items.map(i=>`
+    <a href="${i.href}" class="c-item" target="_blank">
+      <div class="c-icon"><i class="${i.icon}"></i></div>
+      <div>
+        <div class="c-label">${i.label}</div>
+        <div class="c-val">${i.val}</div>
+      </div>
+      <i class="fas fa-arrow-right ms-auto" style="color:var(--muted);font-size:.72rem;"></i>
+    </a>`).join('')
+}
+
+/* ────────── FOOTER ────────── */
+function initFooter(d){
+  document.getElementById('footer').innerHTML =
+    `© ${new Date().getFullYear()} ${d.personal.name} &nbsp;·&nbsp; Built with HTML, CSS & Bootstrap`
+}
+
+/* ────────── SCROLL OBSERVER ────────── */
+function initObserver(){
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){
+        setTimeout(()=>e.target.classList.add('vis'), i*70)
+        obs.unobserve(e.target)
+      }
+    })
+  },{threshold:0.1})
+  document.querySelectorAll('.fu').forEach(el=>obs.observe(el))
+}
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40)
+})
+
+/* ────────── BOOT ────────── */
+document.addEventListener('DOMContentLoaded',()=>{
+  const d = portfolioData
+  initHero(d)
+  initServices(d)
+  initExp(d)
+  initProjects(d)
+  initDocs(d)
+  initSkills(d)
+  initEdu(d)
+  initContact(d)
+  initFooter(d)
+  setTimeout(initObserver, 120)
+})
+</script>
+</body>
+</html>
