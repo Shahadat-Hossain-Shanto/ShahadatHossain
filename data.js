@@ -7,8 +7,8 @@ const portfolioData = {
     phone: "01620925191",
     location: "Nikunja-2, Khilkhet, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
-    linkedin: "",  // Add your LinkedIn URL here, e.g. "https://linkedin.com/in/your-profile"
-    avatar: "img/me.jpeg" // put image URL or relative path e.g. "assets/me.jpg"
+    linkedin: "https://www.linkedin.com/in/shahadat-hossain-shanto-128162318/",
+    avatar: "img/me.jpeg"
   },
 
   services: [
@@ -168,12 +168,25 @@ const portfolioData = {
       title: "CV – Md Shahadat Hossain",
       description: "My latest curriculum vitae including education, work experience, skills, and notable projects.",
       file: "portfolio/CV.pdf",
-      cover: "img/me.jpeg",
+      cover: "img/cv.webp",
       tags: ["CV", "Resume"]
+    },
+    {
+      title: "ERP System – Device Sales Tracking",
+      description: "ERP system to track device lifecycle from warehouse to retailer sales across Bangladesh for Raeno Company.",
+      file: "portfolio/erp.pdf",
+      cover: "img/erp.jpg",
+      tags: ["ERP", "Inventory", "Sales Tracking"]
+    },
+  
+    {
+      title: "PayProtect – Device EMI Protection System",
+      description: "System to manage EMI-based device sales with automated lock/unlock based on payment status, ensuring secure payment tracking.",
+      file: "portfolio/payprotect.pdf",
+      cover: "img/payprotect.png",
+      tags: ["FinTech", "EMI", "Device Management"]
     }
-    // Uncomment and fill in when you have the files ready:
-    // { title: "Breast Cancer Prediction Research", description: "ML research using 6 algorithms on the WDBC dataset.", file: "portfolio/breast-cancer-research.pdf", cover: "", tags: ["Python", "Machine Learning", "Research"] },
-    // { title: "Raeno ERP – Technical Documentation", description: "Full technical documentation including architecture, DB schema, and API reference.", file: "portfolio/raeno-erp-docs.pdf", cover: "", tags: ["Laravel", "ERP", "Documentation"] }
+
   ],
 
   // ── SKILLS ──────────────────────────────────────────────────────────────────

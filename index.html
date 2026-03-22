@@ -318,7 +318,7 @@ function initContact(d){
     {href:'tel:'+p.phone,    icon:'fas fa-phone',          label:'Phone',    val:p.phone},
     {href:'#',               icon:'fas fa-map-marker-alt', label:'Location', val:p.location, self:true},
     p.github   ? {href:p.github,   icon:'fab fa-github',   label:'GitHub',   val:'Shahadat-Hossain-Shanto'} : null,
-    p.linkedin ? {href:p.linkedin, icon:'fab fa-linkedin', label:'LinkedIn', val:p.linkedin} : null,
+    p.linkedin ? {href:p.linkedin, icon:'fab fa-linkedin', label:'LinkedIn', val:'shahadat-hossain-shanto-128162318'} : null,
   ].filter(Boolean)
   document.getElementById('contact-list').innerHTML = items.map(i=>`
     <a href="${i.href}" class="c-item" ${i.self ? '' : 'target="_blank" rel="noopener noreferrer"'}>
