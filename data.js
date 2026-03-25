@@ -20,7 +20,7 @@ const portfolioData = {
     {
       icon: "fas fa-paint-brush",
       title: "Frontend UI Design",
-      description: "Responsive, user-friendly interfaces using HTML, CSS, Bootstrap, JavaScript, Alpine.js, and jQuery."
+      description: "Responsive, user-friendly interfaces using HTML, CSS, Bootstrap, JavaScript, and jQuery."
     },
     {
       icon: "fas fa-database",
@@ -35,7 +35,7 @@ const portfolioData = {
     {
       icon: "fas fa-server",
       title: "VPS & Server Deployment",
-      description: "Linux/Ubuntu VPS setup, Nginx/Apache config, SSL (Let's Encrypt), Supervisor, firewall (UFW), and zero-downtime deployments."
+      description: "Linux/Ubuntu VPS setup, Nginx/Apache config, SSL (Let's Encrypt), Supervisor, firewall (UFW)"
     },
     {
       icon: "fas fa-chart-line",
@@ -45,7 +45,7 @@ const portfolioData = {
     {
       icon: "fas fa-lock",
       title: "Auth & Security",
-      description: "Laravel Sanctum, Passport, JWT, role-based access control (Spatie), OTP/2FA, rate limiting, and CSRF/XSS protection."
+      description: "Laravel Sanctum, Passport, JWT, role-based access control (Spatie), OTP/2FA and CSRF/XSS protection."
     },
     {
       icon: "fas fa-tachometer-alt",
@@ -194,7 +194,7 @@ const portfolioData = {
     "PHP & Laravel Core": [
       "PHP 8.x", "Laravel 10/11", "Eloquent ORM", "Blade Templates",
       "Artisan CLI", "Service Providers", "Facades", "Middleware",
-      "Form Requests", "Observers", "Events & Listeners", "Laravel Mix / Vite"
+      "Form Requests", "Events & Listeners"
     ],
     "Authentication & Security": [
       "Laravel Sanctum", "Laravel Passport", "JWT", "Spatie Permissions",
@@ -203,11 +203,10 @@ const portfolioData = {
     ],
     "Frontend": [
       "HTML5", "CSS3", "JavaScript (ES6+)", "Bootstrap 5",
-      "jQuery", "AJAX", "Alpine.js", "DataTables",
-      "Chart.js", "Livewire (basics)"
+      "jQuery", "AJAX", "DataTables", "Livewire (basics)"
     ],
     "Database": [
-      "MySQL", "MongoDB", "Database Design", "Migrations & Seeders",
+      "MySQL", "PostgreSQL", "MongoDB", "Database Design", "Migrations & Seeders",
       "Query Builder", "Query Optimization", "Indexing",
       "Transactions", "Stored Procedures", "Relationships (1:1, 1:N, M:N)"
     ],
@@ -219,13 +218,13 @@ const portfolioData = {
     "Caching & Queues": [
       "Redis", "Laravel Queues", "Laravel Horizon",
       "Job Batching", "Scheduled Tasks (Cron)",
-      "Event Broadcasting", "Laravel Echo (basics)"
+      "Event Broadcasting", "Laravel Echo"
     ],
     "VPS & Deployment": [
       "Linux / Ubuntu", "Nginx", "Apache",
-      "VPS Setup & Hardening", "SSL – Let's Encrypt / Certbot",
+      "VPS Setup", "SSL – Let's Encrypt / Certbot",
       "UFW Firewall", "Supervisor", "SSH Key Auth",
-      "Git Deployment", "cPanel", "Zero-Downtime Deploy",
+      "Git Deployment", "cPanel",
       ".env Management", "Storage & Symlinks"
     ],
     "Version Control": [
