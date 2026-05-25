@@ -9,17 +9,18 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link href="style.css" rel="stylesheet"/>
-
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080d16'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-weight='700' font-size='13' fill='%2300c8ff' letter-spacing='-1'%3ESH.%3C/text%3E%3C/svg%3E" />
-  <link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080d16'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-weight='700' font-size='13' fill='%2300c8ff' letter-spacing='-1'%3ESH.%3C/text%3E%3C/svg%3E" />
   <meta property="og:title" content="Md Shahadat Hossain – Laravel Developer" />
   <meta property="og:description" content="Laravel developer building scalable web apps, REST APIs, ERP systems & VPS-deployed solutions." />
-  <meta property="og:image" content="img/me.jpeg" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+<base target="_blank">
 </head>
 <body>
 
+<!-- Floating Particles -->
+<div id="particles"></div>
+
+<!-- Preloader -->
 <div id="preloader">
   <div class="pre-inner">
     <span class="pre-brand">SH.</span>
@@ -27,6 +28,7 @@
   </div>
 </div>
 
+<!-- Scroll Progress -->
 <div id="scroll-progress"></div>
 <a id="back-top" href="#hero" title="Back to top"><i class="fas fa-arrow-up"></i></a>
 
@@ -35,13 +37,14 @@
   <div class="container d-flex align-items-center justify-content-between">
     <a class="nav-brand" href="#hero">SH.</a>
     <div class="nav-links" id="nav-links">
-      <a class="nav-lnk" href="#services"       data-section="services">Services</a>
-      <a class="nav-lnk" href="#experience"     data-section="experience">Experience</a>
-      <a class="nav-lnk" href="#projects"       data-section="projects">Projects</a>
+      <a class="nav-lnk" href="#services" data-section="services">Services</a>
+      <a class="nav-lnk" href="#experience" data-section="experience">Experience</a>
+      <a class="nav-lnk" href="#projects" data-section="projects">Projects</a>
       <a class="nav-lnk" href="#portfolio-docs" data-section="portfolio-docs">Portfolio</a>
-      <a class="nav-lnk" href="#skills"         data-section="skills">Skills</a>
-      <a class="nav-lnk" href="#education"      data-section="education">Education</a>
-      <a class="nav-lnk" href="#contact"        data-section="contact">Contact</a>
+      <a class="nav-lnk" href="#skills" data-section="skills">Skills</a>
+      <a class="nav-lnk" href="#education" data-section="education">Education</a>
+      <a class="nav-lnk" href="#game" data-section="game">Play Game</a>
+      <a class="nav-lnk" href="#contact" data-section="contact">Contact</a>
     </div>
     <button class="nav-burger" id="nav-burger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -59,18 +62,46 @@
         <p class="hero-role">* <span id="typed-text"></span><span class="typed-cursor">|</span></p>
         <p class="hero-bio" id="hero-bio"></p>
         <div class="d-flex flex-wrap gap-3 mb-4 hero-btns">
-          <a href="#projects"        class="btn-p"><i class="fas fa-briefcase"></i> View Projects</a>
+          <a href="#projects" class="btn-p"><i class="fas fa-briefcase"></i> View Projects</a>
           <a href="portfolio/CV.pdf" class="btn-o" target="_blank" rel="noopener noreferrer"><i class="fas fa-download"></i> Download CV</a>
-          <a href="#contact"         class="btn-ghost"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+          <a href="#contact" class="btn-ghost"><i class="fas fa-paper-plane"></i> Get In Touch</a>
         </div>
         <div class="social-links" id="social-links"></div>
       </div>
       <div class="col-lg-5 order-1 order-lg-2 text-center">
-        <div class="hero-avatar" id="hero-avatar"></div>
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar" id="hero-avatar"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap">
+  <div class="marquee" id="marquee-content">
+    <span>Laravel Developer</span>
+    <span>PHP 8.x Expert</span>
+    <span>REST API Designer</span>
+    <span>MySQL Architect</span>
+    <span>ERP Systems</span>
+    <span>POS Solutions</span>
+    <span>VPS Deployment</span>
+    <span>Redis Caching</span>
+    <span>Queue Systems</span>
+    <span>Full Stack Dev</span>
+    <span>Laravel Developer</span>
+    <span>PHP 8.x Expert</span>
+    <span>REST API Designer</span>
+    <span>MySQL Architect</span>
+    <span>ERP Systems</span>
+    <span>POS Solutions</span>
+    <span>VPS Deployment</span>
+    <span>Redis Caching</span>
+    <span>Queue Systems</span>
+    <span>Full Stack Dev</span>
+  </div>
+</div>
 
 <!-- ── SERVICES ── -->
 <section id="services">
@@ -79,6 +110,23 @@
     <h2 class="sec-title">Services</h2>
     <div class="sec-divider"></div>
     <div class="row g-4" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ── CAREER OBJECTIVE ── -->
+<section id="career">
+  <div class="container">
+    <p class="sec-label">Career Objective</p>
+    <h2 class="sec-title">About Me</h2>
+    <div class="sec-divider"></div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="obj-card">
+          <p class="obj-text" id="obj-text"></p>
+          <div class="strength-grid" id="strength-grid"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -136,6 +184,36 @@
   </div>
 </section>
 
+<!-- ── GAME ── -->
+<section id="game">
+  <div class="container">
+    <p class="sec-label">Interactive</p>
+    <h2 class="sec-title">Bug Hunter Game</h2>
+    <div class="sec-divider"></div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="game-container">
+          <div class="game-title"><i class="fas fa-gamepad" style="color:var(--accent);margin-right:8px"></i>Bug Hunter</div>
+          <div class="game-sub">Click the bugs before they escape! Test your debugging reflexes.</div>
+          <canvas id="gameCanvas" width="500" height="320"></canvas>
+          <div class="game-stats">
+            <div class="game-stat"><i class="fas fa-crosshairs" style="color:var(--success)"></i> Score: <span class="val" id="gameScore">0</span></div>
+            <div class="game-stat"><i class="fas fa-heart" style="color:var(--danger)"></i> Lives: <span class="val" id="gameLives">3</span></div>
+            <div class="game-stat"><i class="fas fa-clock" style="color:var(--warning)"></i> Time: <span class="val" id="gameTime">60</span>s</div>
+            <div class="game-stat"><i class="fas fa-fire" style="color:var(--accent)"></i> Best: <span class="val" id="gameBest">0</span></div>
+          </div>
+          <div class="game-controls">
+            <button class="game-btn primary" id="gameStart"><i class="fas fa-play"></i> Start Game</button>
+            <button class="game-btn" id="gamePause"><i class="fas fa-pause"></i> Pause</button>
+            <button class="game-btn" id="gameReset"><i class="fas fa-redo"></i> Reset</button>
+          </div>
+          <div class="game-leaderboard" id="gameLeaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── CONTACT ── -->
 <section id="contact">
   <div class="container">
@@ -147,6 +225,24 @@
         <p style="color:var(--muted);line-height:1.8;font-size:.95rem;">
           Open to discussing new projects, interesting ideas, or opportunities. Feel free to reach out!
         </p>
+        <div class="counter-wrap">
+          <div class="counter-item">
+            <div class="counter-num" data-target="8">0</div>
+            <div class="counter-label">Projects</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-num" data-target="3">0</div>
+            <div class="counter-label">Years Exp</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-num" data-target="10">0</div>
+            <div class="counter-label">Skill Areas</div>
+          </div>
+          <div class="counter-item">
+            <div class="counter-num" data-target="3">0</div>
+            <div class="counter-label">Companies</div>
+          </div>
+        </div>
       </div>
       <div class="col-lg-6 offset-lg-1" id="contact-list"></div>
     </div>
@@ -171,9 +267,9 @@ window.addEventListener('load', () => {
 window.addEventListener('scroll', () => {
   const el = document.getElementById('scroll-progress')
   if (!el) return
-  const scrollTop  = window.scrollY
-  const docHeight  = document.documentElement.scrollHeight - window.innerHeight
-  el.style.width   = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%'
+  const scrollTop = window.scrollY
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight
+  el.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%'
 }, { passive: true })
 
 /* ────────── BACK TO TOP ────────── */
@@ -187,7 +283,7 @@ function initHero(d){
   const p = d.personal
   const parts = p.name.split(' ')
   const first = parts.slice(0,-1).join(' ')
-  const last  = parts.slice(-1)[0]
+  const last = parts.slice(-1)[0]
   document.getElementById('hero-name').innerHTML = first + ' <span class="acc">' + last + '</span>'
   document.getElementById('hero-bio').textContent = p.tagline
   document.title = 'Portfolio – ' + p.name
@@ -203,27 +299,35 @@ function initHero(d){
   })
 
   const av = document.getElementById('hero-avatar')
-  if(p.avatar){
-    av.innerHTML = '<img src="'+p.avatar+'" alt="'+p.name+'" loading="eager">'
+  if (p.avatar) {
+    av.innerHTML = '<img src="' + p.avatar + '" alt="' + p.name + '" loading="eager">'
   } else {
-    av.textContent = p.name.split(' ').map(w=>w[0]).slice(0,2).join('')
+    av.textContent = p.name.split(' ').map(w => w[0]).slice(0, 2).join('')
   }
 
   const links = [
-    {href:'mailto:'+p.email, icon:'fas fa-envelope', label:'Email'},
-    {href:'tel:'+p.phone,    icon:'fas fa-phone',    label:'Phone'},
-    p.github   ? {href:p.github,   icon:'fab fa-github',   label:'GitHub'}   : null,
-    p.linkedin ? {href:p.linkedin, icon:'fab fa-linkedin', label:'LinkedIn'} : null,
+    {href: 'mailto:' + p.email, icon: 'fas fa-envelope', label: 'Email'},
+    {href: 'tel:' + p.phone, icon: 'fas fa-phone', label: 'Phone'},
+    p.github ? {href: p.github, icon: 'fab fa-github', label: 'GitHub'} : null,
+    p.linkedin ? {href: p.linkedin, icon: 'fab fa-linkedin', label: 'LinkedIn'} : null,
   ].filter(Boolean)
-  document.getElementById('social-links').innerHTML = links.map(l=>
+  document.getElementById('social-links').innerHTML = links.map(l =>
     `<a href="${l.href}" class="soc-lnk" title="${l.label}" target="_blank" rel="noopener noreferrer"><i class="${l.icon}"></i></a>`
+  ).join('')
+}
+
+/* ────────── CAREER OBJECTIVE ────────── */
+function initCareer(d) {
+  document.getElementById('obj-text').textContent = d.careerObjective
+  document.getElementById('strength-grid').innerHTML = d.strengths.map(s =>
+    `<div class="strength-item"><i class="fas fa-check"></i><span>${s}</span></div>`
   ).join('')
 }
 
 /* ────────── SERVICES ────────── */
 function initServices(d){
-  document.getElementById('services-grid').innerHTML = d.services.map(s=>`
-    <div class="col-md-6 col-lg-3 fu">
+  document.getElementById('services-grid').innerHTML = d.services.map((s, i) => `
+    <div class="col-md-6 col-lg-3 fu" style="transition-delay:${i * 0.08}s">
       <div class="gc">
         <div class="svc-icon"><i class="${s.icon}"></i></div>
         <div class="svc-title">${s.title}</div>
@@ -234,28 +338,29 @@ function initServices(d){
 
 /* ────────── EXPERIENCE ────────── */
 function initExp(d){
-  document.getElementById('exp-timeline').innerHTML = d.experiences.map(e=>`
-    <div class="exp-item fu">
+  document.getElementById('exp-timeline').innerHTML = d.experiences.map((e, i) => `
+    <div class="exp-item fu" style="transition-delay:${i * 0.12}s">
       <div class="exp-dot"></div>
       <span class="exp-badge">${e.type}</span>
       <div class="exp-role">${e.role}</div>
       <div class="exp-co">${e.company}</div>
       <div class="exp-meta">${e.location} &nbsp;·&nbsp; ${e.period}</div>
-      <ul class="exp-pts">${e.points.map(p=>`<li>${p}</li>`).join('')}</ul>
+      <ul class="exp-pts">${e.points.map(p => `<li>${p}</li>`).join('')}</ul>
     </div>`).join('')
 }
 
 /* ────────── PROJECTS ────────── */
 function initProjects(d){
-  document.getElementById('projects-grid').innerHTML = d.projects.map(p=>`
-    <div class="col-md-6 col-lg-4 fu">
+  document.getElementById('projects-grid').innerHTML = d.projects.map((p, i) => `
+    <div class="col-md-6 col-lg-4 fu" style="transition-delay:${i * 0.08}s">
       <div class="gc d-flex flex-column">
-        <div class="p-tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <div class="p-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="p-title">${p.title}</div>
         <div class="p-desc">${p.description}</div>
         <div class="p-links">
           ${p.live ? `<a href="${p.live}" class="p-lnk" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live</a>` : ''}
           ${p.repo ? `<a href="${p.repo}" class="p-lnk" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>` : ''}
+          ${!p.live && !p.repo ? `<span class="p-lnk" style="cursor:default"><i class="fas fa-lock"></i> Private</span>` : ''}
         </div>
       </div>
     </div>`).join('')
@@ -268,15 +373,15 @@ function initDocs(d){
     document.getElementById('portfolio-docs').style.display = 'none'
     return
   }
-  document.getElementById('docs-grid').innerHTML = validDocs.map(doc=>`
-    <div class="col-md-6 col-lg-4 fu">
+  document.getElementById('docs-grid').innerHTML = validDocs.map((doc, i) => `
+    <div class="col-md-6 col-lg-4 fu" style="transition-delay:${i * 0.1}s">
       <div class="gc d-flex flex-column">
         <div class="doc-cover">
           ${doc.cover
             ? `<img src="${doc.cover}" alt="${doc.title}" loading="lazy">`
             : `<i class="fas fa-file-pdf"></i>`}
         </div>
-        <div class="p-tags">${doc.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <div class="p-tags">${doc.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="doc-title">${doc.title}</div>
         <div class="doc-desc">${doc.description}</div>
         <a href="${doc.file}" class="doc-open" target="_blank" rel="noopener noreferrer">
@@ -288,19 +393,19 @@ function initDocs(d){
 
 /* ────────── SKILLS ────────── */
 function initSkills(d){
-  document.getElementById('skills-grid').innerHTML = Object.entries(d.skills).map(([g,items])=>`
-    <div class="col-md-6 col-lg-4 fu">
+  document.getElementById('skills-grid').innerHTML = Object.entries(d.skills).map(([g, items], i) => `
+    <div class="col-md-6 col-lg-4 fu" style="transition-delay:${i * 0.06}s">
       <div class="gc">
         <div class="skill-group-title">${g}</div>
-        <div class="skill-pills">${items.map(s=>`<span class="s-pill">${s}</span>`).join('')}</div>
+        <div class="skill-pills">${items.map(s => `<span class="s-pill">${s}</span>`).join('')}</div>
       </div>
     </div>`).join('')
 }
 
 /* ────────── EDUCATION ────────── */
 function initEdu(d){
-  document.getElementById('edu-grid').innerHTML = d.education.map(e=>`
-    <div class="col-md-6 col-lg-4 fu">
+  document.getElementById('edu-grid').innerHTML = d.education.map((e, i) => `
+    <div class="col-md-6 col-lg-4 fu" style="transition-delay:${i * 0.1}s">
       <div class="gc">
         <div class="edu-year">${e.year}</div>
         <div class="edu-deg">${e.degree}</div>
@@ -314,13 +419,13 @@ function initEdu(d){
 function initContact(d){
   const p = d.personal
   const items = [
-    {href:'mailto:'+p.email, icon:'fas fa-envelope',      label:'Email',    val:p.email},
-    {href:'tel:'+p.phone,    icon:'fas fa-phone',          label:'Phone',    val:p.phone},
-    {href:'#',               icon:'fas fa-map-marker-alt', label:'Location', val:p.location, self:true},
-    p.github   ? {href:p.github,   icon:'fab fa-github',   label:'GitHub',   val:'Shahadat-Hossain-Shanto'} : null,
-    p.linkedin ? {href:p.linkedin, icon:'fab fa-linkedin', label:'LinkedIn', val:'shahadat-hossain-shanto-128162318'} : null,
+    {href: 'mailto:' + p.email, icon: 'fas fa-envelope', label: 'Email', val: p.email},
+    {href: 'tel:' + p.phone, icon: 'fas fa-phone', label: 'Phone', val: '+88 ' + p.phone},
+    {href: '#', icon: 'fas fa-map-marker-alt', label: 'Location', val: p.location, self: true},
+    p.github ? {href: p.github, icon: 'fab fa-github', label: 'GitHub', val: 'Shahadat-Hossain-Shanto'} : null,
+    p.linkedin ? {href: p.linkedin, icon: 'fab fa-linkedin', label: 'LinkedIn', val: 'shahadat-hossain-shanto'} : null,
   ].filter(Boolean)
-  document.getElementById('contact-list').innerHTML = items.map(i=>`
+  document.getElementById('contact-list').innerHTML = items.map(i => `
     <a href="${i.href}" class="c-item" ${i.self ? '' : 'target="_blank" rel="noopener noreferrer"'}>
       <div class="c-icon"><i class="${i.icon}"></i></div>
       <div>
@@ -339,40 +444,40 @@ function initFooter(d){
 
 /* ────────── SCROLL OBSERVER ────────── */
 function initObserver(){
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach((e,i)=>{
-      if(e.isIntersecting){
-        setTimeout(()=>e.target.classList.add('vis'), i*70)
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('vis'), i * 70)
         obs.unobserve(e.target)
       }
     })
-  },{threshold:0.1})
-  document.querySelectorAll('.fu').forEach(el=>obs.observe(el))
+  }, {threshold: 0.1})
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el))
 }
 
 /* ────────── ACTIVE NAV ON SCROLL ────────── */
 function initActiveNav(){
   const sections = document.querySelectorAll('section[id]')
-  const links    = document.querySelectorAll('.nav-lnk[data-section]')
+  const links = document.querySelectorAll('.nav-lnk[data-section]')
   function setActive(){
     let current = ''
     sections.forEach(sec => {
       const top = sec.offsetTop - 100
-      if(window.scrollY >= top) current = sec.getAttribute('id')
+      if (window.scrollY >= top) current = sec.getAttribute('id')
     })
     links.forEach(lnk => {
       lnk.classList.toggle('active', lnk.dataset.section === current)
     })
   }
-  window.addEventListener('scroll', setActive, {passive:true})
+  window.addEventListener('scroll', setActive, {passive: true})
   setActive()
 }
 
 /* ────────── BURGER MENU ────────── */
 function initBurger(){
   const burger = document.getElementById('nav-burger')
-  const links  = document.getElementById('nav-links')
-  if(!burger) return
+  const links = document.getElementById('nav-links')
+  if (!burger) return
   burger.addEventListener('click', () => {
     burger.classList.toggle('open')
     links.classList.toggle('mobile-open')
@@ -385,14 +490,298 @@ function initBurger(){
   })
 }
 
-window.addEventListener('scroll',()=>{
+window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40)
-},{ passive:true })
+}, {passive: true})
+
+/* ────────── FLOATING PARTICLES ────────── */
+function initParticles() {
+  const container = document.getElementById('particles')
+  if (!container) return
+  for (let i = 0; i < 25; i++) {
+    const p = document.createElement('div')
+    p.className = 'particle'
+    const size = Math.random() * 3 + 1
+    p.style.width = size + 'px'
+    p.style.height = size + 'px'
+    p.style.left = Math.random() * 100 + '%'
+    p.style.animationDuration = (Math.random() * 15 + 10) + 's'
+    p.style.animationDelay = (Math.random() * 10) + 's'
+    p.style.opacity = Math.random() * 0.3 + 0.1
+    container.appendChild(p)
+  }
+}
+
+/* ────────── COUNTER ANIMATION ────────── */
+function initCounters() {
+  const counters = document.querySelectorAll('.counter-num')
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target
+        const target = parseInt(el.dataset.target)
+        let current = 0
+        const increment = target / 40
+        const timer = setInterval(() => {
+          current += increment
+          if (current >= target) {
+            el.textContent = target
+            clearInterval(timer)
+          } else {
+            el.textContent = Math.floor(current)
+          }
+        }, 30)
+        observer.unobserve(el)
+      }
+    })
+  }, {threshold: 0.5})
+  counters.forEach(c => observer.observe(c))
+}
+
+/* ────────── BUG HUNTER GAME ────────── */
+function initGame() {
+  const canvas = document.getElementById('gameCanvas')
+  if (!canvas) return
+  const ctx = canvas.getContext('2d')
+  const scoreEl = document.getElementById('gameScore')
+  const livesEl = document.getElementById('gameLives')
+  const timeEl = document.getElementById('gameTime')
+  const bestEl = document.getElementById('gameBest')
+  const leaderboardEl = document.getElementById('gameLeaderboard')
+
+  let score = 0, lives = 3, timeLeft = 60, best = parseInt(localStorage.getItem('bugHunterBest') || '0')
+  let gameRunning = false, gamePaused = false, bugs = [], particles = [], lastTime = 0
+  let spawnInterval = 1500, bugSpeed = 1.5
+
+  bestEl.textContent = best
+
+  // Bug types
+  const bugTypes = [
+    {emoji: '🐛', points: 10, speed: 1, size: 28},
+    {emoji: '🪲', points: 15, speed: 1.3, size: 26},
+    {emoji: '🦟', points: 20, speed: 1.6, size: 24},
+    {emoji: '🕷️', points: 25, speed: 2, size: 22},
+    {emoji: '🐝', points: 30, speed: 2.3, size: 24},
+    {emoji: '☠️', points: -10, speed: 1.8, size: 26, bad: true}
+  ]
+
+  class Bug {
+    constructor() {
+      const type = bugTypes[Math.floor(Math.random() * bugTypes.length)]
+      this.type = type
+      this.x = Math.random() * (canvas.width - 40) + 20
+      this.y = canvas.height + 30
+      this.targetY = Math.random() * (canvas.height * 0.6) + 20
+      this.vx = (Math.random() - 0.5) * type.speed
+      this.vy = -type.speed
+      this.size = type.size
+      this.angle = 0
+      this.wobble = Math.random() * 0.1
+      this.alive = true
+      this.escaping = false
+    }
+    update() {
+      if (!this.alive) return
+      this.x += this.vx + Math.sin(this.angle) * 2
+      this.y += this.vy
+      this.angle += this.wobble
+      if (this.y < this.targetY && !this.escaping) {
+        this.escaping = true
+        this.vy = type.speed * 1.5
+        this.vx = (Math.random() - 0.5) * 3
+      }
+      if (this.escaping && this.y > canvas.height + 50) {
+        this.alive = false
+        if (!this.type.bad) {
+          lives--
+          updateUI()
+          if (lives <= 0) endGame()
+        }
+      }
+      if (this.x < 0 || this.x > canvas.width) this.vx *= -1
+    }
+    draw() {
+      if (!this.alive) return
+      ctx.save()
+      ctx.translate(this.x, this.y)
+      ctx.rotate(Math.sin(this.angle) * 0.3)
+      ctx.font = this.size + 'px Arial'
+      ctx.textAlign = 'center'
+      ctx.textBaseline = 'middle'
+      ctx.shadowColor = this.type.bad ? 'rgba(255,56,96,0.5)' : 'rgba(0,200,255,0.4)'
+      ctx.shadowBlur = 10
+      ctx.fillText(this.type.emoji, 0, 0)
+      ctx.restore()
+    }
+    hit(mx, my) {
+      const dx = mx - this.x
+      const dy = my - this.y
+      return Math.sqrt(dx*dx + dy*dy) < this.size + 8
+    }
+  }
+
+  class Particle {
+    constructor(x, y, color) {
+      this.x = x; this.y = y
+      this.vx = (Math.random() - 0.5) * 6
+      this.vy = (Math.random() - 0.5) * 6
+      this.life = 1
+      this.color = color
+      this.size = Math.random() * 4 + 2
+    }
+    update() {
+      this.x += this.vx
+      this.y += this.vy
+      this.vy += 0.2
+      this.life -= 0.03
+    }
+    draw() {
+      ctx.globalAlpha = this.life
+      ctx.fillStyle = this.color
+      ctx.beginPath()
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+      ctx.fill()
+      ctx.globalAlpha = 1
+    }
+  }
+
+  function spawnBug() {
+    if (!gameRunning || gamePaused) return
+    bugs.push(new Bug())
+    spawnInterval = Math.max(600, 1500 - score * 8)
+    setTimeout(spawnBug, spawnInterval)
+  }
+
+  function updateUI() {
+    scoreEl.textContent = score
+    livesEl.textContent = lives
+    timeEl.textContent = timeLeft
+  }
+
+  function endGame() {
+    gameRunning = false
+    if (score > best) {
+      best = score
+      localStorage.setItem('bugHunterBest', best.toString())
+      bestEl.textContent = best
+    }
+    leaderboardEl.innerHTML = `<strong>Game Over!</strong> Final Score: ${score} | Best: ${best} <br><span style="font-size:0.65rem;color:var(--muted)">Click Start to play again</span>`
+  }
+
+  function gameLoop(timestamp) {
+    if (!gameRunning) return
+    const dt = timestamp - lastTime
+    lastTime = timestamp
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    // Grid background
+    ctx.strokeStyle = 'rgba(0,200,255,0.04)'
+    ctx.lineWidth = 1
+    for (let x = 0; x < canvas.width; x += 40) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke()
+    }
+    for (let y = 0; y < canvas.height; y += 40) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke()
+    }
+
+    if (!gamePaused) {
+      bugs = bugs.filter(b => b.alive)
+      bugs.forEach(b => b.update())
+      particles.forEach(p => p.update())
+      particles = particles.filter(p => p.life > 0)
+    }
+
+    bugs.forEach(b => b.draw())
+    particles.forEach(p => p.draw())
+
+    // HUD on canvas
+    ctx.fillStyle = 'rgba(0,200,255,0.15)'
+    ctx.font = '12px "Space Mono", monospace'
+    ctx.fillText('BUG HUNTER v1.0', 10, 20)
+
+    if (gameRunning) requestAnimationFrame(gameLoop)
+  }
+
+  canvas.addEventListener('click', (e) => {
+    if (!gameRunning || gamePaused) return
+    const rect = canvas.getBoundingClientRect()
+    const mx = e.clientX - rect.left
+    const my = e.clientY - rect.top
+
+    let hit = false
+    bugs.forEach(b => {
+      if (b.alive && b.hit(mx, my)) {
+        b.alive = false
+        hit = true
+        if (b.type.bad) {
+          lives--
+          for (let i = 0; i < 8; i++) particles.push(new Particle(b.x, b.y, '#ff3860'))
+        } else {
+          score += b.type.points
+          for (let i = 0; i < 12; i++) particles.push(new Particle(b.x, b.y, '#00c8ff'))
+          for (let i = 0; i < 6; i++) particles.push(new Particle(b.x, b.y, '#00d9a3'))
+        }
+        updateUI()
+        if (lives <= 0) endGame()
+      }
+    })
+    if (!hit) {
+      // Miss penalty visual
+      ctx.fillStyle = 'rgba(255,56,96,0.3)'
+      ctx.beginPath()
+      ctx.arc(mx, my, 20, 0, Math.PI * 2)
+      ctx.fill()
+    }
+  })
+
+  let timerInterval
+  document.getElementById('gameStart').addEventListener('click', () => {
+    if (gameRunning) return
+    score = 0; lives = 3; timeLeft = 60; bugs = []; particles = []
+    gameRunning = true; gamePaused = false
+    updateUI()
+    leaderboardEl.innerHTML = ''
+    lastTime = performance.now()
+    requestAnimationFrame(gameLoop)
+    spawnBug()
+    clearInterval(timerInterval)
+    timerInterval = setInterval(() => {
+      if (!gameRunning || gamePaused) return
+      timeLeft--
+      updateUI()
+      if (timeLeft <= 0) { clearInterval(timerInterval); endGame() }
+    }, 1000)
+  })
+
+  document.getElementById('gamePause').addEventListener('click', () => {
+    if (!gameRunning) return
+    gamePaused = !gamePaused
+    document.getElementById('gamePause').innerHTML = gamePaused
+      ? '<i class="fas fa-play"></i> Resume'
+      : '<i class="fas fa-pause"></i> Pause'
+    if (!gamePaused) {
+      lastTime = performance.now()
+      requestAnimationFrame(gameLoop)
+    }
+  })
+
+  document.getElementById('gameReset').addEventListener('click', () => {
+    gameRunning = false; gamePaused = false
+    clearInterval(timerInterval)
+    score = 0; lives = 3; timeLeft = 60; bugs = []; particles = []
+    updateUI()
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    leaderboardEl.innerHTML = ''
+    document.getElementById('gamePause').innerHTML = '<i class="fas fa-pause"></i> Pause'
+  })
+}
 
 /* ────────── BOOT ────────── */
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
   const d = portfolioData
   initHero(d)
+  initCareer(d)
   initServices(d)
   initExp(d)
   initProjects(d)
@@ -401,7 +790,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   initEdu(d)
   initContact(d)
   initFooter(d)
-  setTimeout(initObserver, 120)
+  initParticles()
+  initGame()
+  setTimeout(() => {
+    initObserver()
+    initCounters()
+  }, 150)
   initActiveNav()
   initBurger()
 })

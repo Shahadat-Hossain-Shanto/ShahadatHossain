@@ -11,6 +11,15 @@ const portfolioData = {
     avatar: "img/me.jpeg"
   },
 
+  careerObjective: "Looking for a challenging role in a dynamic organization where I can use my skills in Laravel development, frontend design, and database management to create reliable and innovative web applications. I want to contribute to the team's success while learning more about software development, business intelligence, and quality assurance, helping deliver great results and grow.",
+
+  strengths: [
+    "Willing to accept responsibility and perform accordingly",
+    "Strong analytical ability",
+    "Ability to manage time and adapt with flexibility",
+    "Ability to work in groups and maintain effective communication"
+  ],
+
   services: [
     {
       icon: "fas fa-code",
@@ -55,46 +64,46 @@ const portfolioData = {
   ],
 
   experiences: [
-      {
-        role: "Laravel Developer",
-        company: "Softvence Delta",
-        location: "Dhaka, Bangladesh",
-        period: "December 2025 – Present",
-        type: "Full-time",
-        points: [
-          "Developing and maintaining scalable Laravel applications with clean, well-structured MVC architecture.",
-          "Building and consuming RESTful APIs integrated with mobile and third-party platforms.",
-          "Designing normalized database schemas, writing optimized queries, and managing migrations and seeders.",
-          "Implementing role-based access control, authentication (Sanctum/Passport), and application security best practices.",
-          "Deploying and managing applications on VPS — configuring Nginx, SSL (Let's Encrypt), Supervisor, and UFW firewall.",
-          "Collaborating with frontend and mobile teams to deliver seamless, user-focused features on schedule."
-        ]
-      },
-      {
-        role: "Software Engineer (Laravel)",
-        company: "Inovex Idea Solution Limited",
-        location: "Middle-Badda, Dhaka",
-        period: "January 2025 – November 2025",
-        type: "Full-time",
-        points: [
-          "Developing and maintaining scalable web applications using Laravel, MySQL, JavaScript, AJAX, jQuery, HTML, CSS, and Bootstrap.",
-          "Collaborating with teams to deliver efficient, user-friendly solutions.",
-          "Implementing database structures, optimizing queries, and ensuring application performance.",
-          "Contributing to full-stack development, from frontend UI to backend logic and VPS deployment."
-        ]
-      },
-      {
-        role: "Software Engineer Internship (Laravel)",
-        company: "Inovex Idea Solution Limited",
-        location: "Middle-Badda, Dhaka",
-        period: "July 2024 – December 2024",
-        type: "Internship",
-        points: [
-          "Contributed to developing multiple web applications using Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript, AJAX, and jQuery.",
-          "Collaborated with a team to build responsive, user-friendly interfaces.",
-          "Gained hands-on experience in full-stack development, database management, and debugging."
-        ]
-      }
+    {
+      role: "Laravel Developer",
+      company: "Softvence Delta",
+      location: "Dhaka, Bangladesh",
+      period: "December 2025 – Present",
+      type: "Full-time",
+      points: [
+        "Developing and maintaining scalable Laravel applications with clean, well-structured MVC architecture.",
+        "Building and consuming RESTful APIs integrated with mobile and third-party platforms.",
+        "Designing normalized database schemas, writing optimized queries, and managing migrations and seeders.",
+        "Implementing role-based access control, authentication (Sanctum/Passport), and application security best practices.",
+        "Deploying and managing applications on VPS — configuring Nginx, SSL (Let's Encrypt), Supervisor, and UFW firewall.",
+        "Collaborating with frontend and mobile teams to deliver seamless, user-focused features on schedule."
+      ]
+    },
+    {
+      role: "Software Engineer (Laravel)",
+      company: "Inovex Idea Solution Limited",
+      location: "Middle-Badda, Dhaka",
+      period: "January 2025 – November 2025",
+      type: "Full-time",
+      points: [
+        "Developing and maintaining scalable web applications using Laravel, MySQL, JavaScript, AJAX, jQuery, HTML, CSS, and Bootstrap.",
+        "Collaborating with teams to deliver efficient, user-friendly solutions.",
+        "Implementing database structures, optimizing queries, and ensuring application performance.",
+        "Contributing to full-stack development, from frontend UI to backend logic and VPS deployment."
+      ]
+    },
+    {
+      role: "Software Engineer Internship (Laravel)",
+      company: "Inovex Idea Solution Limited",
+      location: "Middle-Badda, Dhaka",
+      period: "July 2024 – December 2024",
+      type: "Internship",
+      points: [
+        "Contributed to developing multiple web applications using Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript, AJAX, and jQuery.",
+        "Collaborated with a team to build responsive, user-friendly interfaces.",
+        "Gained hands-on experience in full-stack development, database management, and debugging."
+      ]
+    }
   ],
 
   projects: [
@@ -153,17 +162,17 @@ const portfolioData = {
       tags: ["Laravel", "MySQL", "Bootstrap", "JavaScript"],
       repo: "https://github.com/Shahadat-Hossain-Shanto/vehicle_rental_system",
       live: ""
+    },
+    {
+      title: "Breast Cancer Prediction (Research)",
+      description: "Comparative research using six machine learning algorithms on the WDBC dataset for breast cancer prediction, implemented in Python with Google Colab.",
+      tags: ["Python", "Machine Learning", "Research", "WDBC"],
+      repo: "",
+      live: ""
     }
   ],
 
-  // ── PORTFOLIO DOCUMENTS ─────────────────────────────────────────────────────
-  // 1. Create a folder called "portfolio/" next to index.html
-  // 2. Drop your PDF files inside it
-  // 3. Add each one below — they will appear as clickable cards that open the PDF
-  // "cover" is optional: put a preview image path or leave ""
   portfolioDocs: [
-    // Add more documents here as:
-    // { title: "...", description: "...", file: "portfolio/xxx.pdf", cover: "", tags: ["..."] }
     {
       title: "CV – Md Shahadat Hossain",
       description: "My latest curriculum vitae including education, work experience, skills, and notable projects.",
@@ -178,7 +187,6 @@ const portfolioData = {
       cover: "img/erp.jpg",
       tags: ["ERP", "Inventory", "Sales Tracking"]
     },
-  
     {
       title: "PayProtect – Device EMI Protection System",
       description: "System to manage EMI-based device sales with automated lock/unlock based on payment status, ensuring secure payment tracking.",
@@ -186,10 +194,8 @@ const portfolioData = {
       cover: "img/payprotect.png",
       tags: ["FinTech", "EMI", "Device Management"]
     }
-
   ],
 
-  // ── SKILLS ──────────────────────────────────────────────────────────────────
   skills: {
     "PHP & Laravel Core": [
       "PHP 8.x", "Laravel 10/11", "Eloquent ORM", "Blade Templates",
@@ -259,5 +265,6 @@ const portfolioData = {
       result: "GPA: 4.72 / 5.00",
       year: "2016"
     }
-  ]
+  ],
+
 };
