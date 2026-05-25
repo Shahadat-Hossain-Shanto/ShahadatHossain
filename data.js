@@ -11,13 +11,20 @@ const portfolioData = {
     avatar: "img/me.jpeg"
   },
 
-  careerObjective: "Looking for a challenging role in a dynamic organization where I can use my skills in Laravel development, frontend design, and database management to create reliable and innovative web applications. I want to contribute to the team's success while learning more about software development, business intelligence, and quality assurance, helping deliver great results and grow.",
+  careerObjective: "Looking for a challenging role in a dynamic organization where I can use my skills in Laravel development, frontend design, and database management to create reliable and innovative web applications. I want to contribute to the team's success while learning more about software development, business intelligence, and quality assurance.",
 
   strengths: [
     "Willing to accept responsibility and perform accordingly",
-    "Strong analytical ability",
+    "Strong analytical ability with problem-solving mindset",
     "Ability to manage time and adapt with flexibility",
     "Ability to work in groups and maintain effective communication"
+  ],
+
+  stats: [
+    { label: "Projects Built", value: 9, icon: "fas fa-rocket" },
+    { label: "Years Experience", value: 2, icon: "fas fa-calendar-check" },
+    { label: "Tech Stack Areas", value: 10, icon: "fas fa-layer-group" },
+    { label: "Companies Worked", value: 2, icon: "fas fa-building" }
   ],
 
   services: [
@@ -29,7 +36,7 @@ const portfolioData = {
     {
       icon: "fas fa-paint-brush",
       title: "Frontend UI Design",
-      description: "Responsive, user-friendly interfaces using HTML, CSS, Bootstrap, JavaScript, and jQuery."
+      description: "Responsive, user-friendly interfaces using HTML, CSS, Bootstrap, JavaScript, Alpine.js, and jQuery."
     },
     {
       icon: "fas fa-database",
@@ -44,7 +51,7 @@ const portfolioData = {
     {
       icon: "fas fa-server",
       title: "VPS & Server Deployment",
-      description: "Linux/Ubuntu VPS setup, Nginx/Apache config, SSL (Let's Encrypt), Supervisor, firewall (UFW)"
+      description: "Linux/Ubuntu VPS setup, Nginx/Apache config, SSL (Let's Encrypt), Supervisor, firewall (UFW), and zero-downtime deployments."
     },
     {
       icon: "fas fa-chart-line",
@@ -54,7 +61,7 @@ const portfolioData = {
     {
       icon: "fas fa-lock",
       title: "Auth & Security",
-      description: "Laravel Sanctum, Passport, JWT, role-based access control (Spatie), OTP/2FA and CSRF/XSS protection."
+      description: "Laravel Sanctum, Passport, JWT, role-based access control (Spatie), OTP/2FA, rate limiting, and CSRF/XSS protection."
     },
     {
       icon: "fas fa-tachometer-alt",
@@ -200,7 +207,7 @@ const portfolioData = {
     "PHP & Laravel Core": [
       "PHP 8.x", "Laravel 10/11", "Eloquent ORM", "Blade Templates",
       "Artisan CLI", "Service Providers", "Facades", "Middleware",
-      "Form Requests", "Events & Listeners"
+      "Form Requests", "Observers", "Events & Listeners", "Laravel Mix / Vite"
     ],
     "Authentication & Security": [
       "Laravel Sanctum", "Laravel Passport", "JWT", "Spatie Permissions",
@@ -209,10 +216,11 @@ const portfolioData = {
     ],
     "Frontend": [
       "HTML5", "CSS3", "JavaScript (ES6+)", "Bootstrap 5",
-      "jQuery", "AJAX", "DataTables", "Livewire (basics)"
+      "jQuery", "AJAX", "Alpine.js", "DataTables",
+      "Chart.js", "Livewire (basics)"
     ],
     "Database": [
-      "MySQL", "PostgreSQL", "MongoDB", "Database Design", "Migrations & Seeders",
+      "MySQL", "MongoDB", "Database Design", "Migrations & Seeders",
       "Query Builder", "Query Optimization", "Indexing",
       "Transactions", "Stored Procedures", "Relationships (1:1, 1:N, M:N)"
     ],
@@ -224,13 +232,13 @@ const portfolioData = {
     "Caching & Queues": [
       "Redis", "Laravel Queues", "Laravel Horizon",
       "Job Batching", "Scheduled Tasks (Cron)",
-      "Event Broadcasting", "Laravel Echo"
+      "Event Broadcasting", "Laravel Echo (basics)"
     ],
     "VPS & Deployment": [
       "Linux / Ubuntu", "Nginx", "Apache",
-      "VPS Setup", "SSL – Let's Encrypt / Certbot",
+      "VPS Setup & Hardening", "SSL – Let's Encrypt / Certbot",
       "UFW Firewall", "Supervisor", "SSH Key Auth",
-      "Git Deployment", "cPanel",
+      "Git Deployment", "cPanel", "Zero-Downtime Deploy",
       ".env Management", "Storage & Symlinks"
     ],
     "Version Control": [
@@ -264,6 +272,5 @@ const portfolioData = {
       result: "GPA: 4.72 / 5.00",
       year: "2016"
     }
-  ],
-
+  ]
 };
