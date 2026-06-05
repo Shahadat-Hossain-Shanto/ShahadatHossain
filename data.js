@@ -21,13 +21,17 @@ const portfolioData = {
     ]
   },
 
-  careerObjective: "Looking for a challenging role in a dynamic organization where I can use my skills in Laravel development, frontend design, and database management to create reliable and innovative web applications. I want to contribute to the team's success while learning more about software development, business intelligence, and quality assurance.",
+  careerObjective: "Results-driven Laravel Developer with experience in building scalable web applications, RESTful APIs, and database-driven solutions. Seeking a challenging position where I can leverage my expertise in backend development, frontend technologies, and software architecture to deliver high-quality digital products while continuously expanding my technical and leadership skills.",
 
   strengths: [
-    "Willing to accept responsibility and perform accordingly",
-    "Strong analytical ability with problem-solving mindset",
-    "Ability to manage time and adapt with flexibility",
-    "Ability to work in groups and maintain effective communication"
+    "Strong expertise in Laravel, PHP, MySQL, and REST API development",
+    "Excellent analytical and problem-solving abilities",
+    "Ability to design scalable, secure, and maintainable applications",
+    "Effective time management and project prioritization skills",
+    "Strong communication and teamwork capabilities",
+    "Quick learner with adaptability to new technologies and frameworks",
+    "Commitment to code quality, performance optimization, and best practices",
+    "Ability to take ownership of projects and deliver results independently"
   ],
 
   stats: [

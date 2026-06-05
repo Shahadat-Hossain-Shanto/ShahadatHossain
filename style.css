@@ -90,7 +90,7 @@ section{position:relative;z-index:1}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
 
 /* ── HERO IMAGE (NEW DESIGN) ── */
-.hero-img-col{display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative}
+.hero-img-col{display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;transform:translateX(10px)}
 .hero-img-wrap{position:relative;width:min(32vw,280px);max-width:280px;height:min(40vw,340px);max-height:340px;display:flex;align-items:center;justify-content:center;padding:8px}
 .hero-img-frame{position:absolute;inset:0;border-radius:32px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.14);box-shadow:0 34px 90px rgba(0,0,0,.18);transition:transform .35s ease,box-shadow .35s ease}
 .hero-img-wrap:hover .hero-img-frame{transform:translateY(-6px);box-shadow:0 44px 110px rgba(0,0,0,.22)}
