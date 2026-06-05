@@ -11,7 +11,7 @@ const portfolioData = {
     avatar: "img/me.jpeg",
     badges: [
         "Jr. Software Engineer",
-        "Laravel & PHP Developer",
+        "Laravel Developer",
         "Full Stack Engineer",
         "Backend Systems Architect",
         "RESTful API Specialist",
