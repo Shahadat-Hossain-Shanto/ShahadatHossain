@@ -21,10 +21,10 @@ const portfolioData = {
   ],
 
   stats: [
-    { label: "Projects Built", value: 9, icon: "fas fa-rocket" },
+    { label: "Projects Built", value: 15, icon: "fas fa-rocket" },
     { label: "Years Experience", value: 2, icon: "fas fa-calendar-check" },
     { label: "Tech Stack Areas", value: 10, icon: "fas fa-layer-group" },
-    { label: "Companies Worked", value: 2, icon: "fas fa-building" }
+    { label: "Companies Worked", value: 3, icon: "fas fa-building" }
   ],
 
   services: [
