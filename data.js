@@ -8,7 +8,17 @@ const portfolioData = {
     location: "Nikunja-2, Khilkhet, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
     linkedin: "https://www.linkedin.com/in/shahadat-hossain-shanto-128162318/",
-    avatar: "img/me.jpeg"
+    avatar: "img/me.jpeg",
+    badges: [
+        "Jr. Software Engineer",
+        "Laravel & PHP Developer",
+        "Full Stack Engineer",
+        "Backend Systems Architect",
+        "RESTful API Specialist",
+        "Database Design Engineer",
+        "Web Application Architect",
+        "Cloud & DevOps Practitioner"
+    ]
   },
 
   careerObjective: "Looking for a challenging role in a dynamic organization where I can use my skills in Laravel development, frontend design, and database management to create reliable and innovative web applications. I want to contribute to the team's success while learning more about software development, business intelligence, and quality assurance.",

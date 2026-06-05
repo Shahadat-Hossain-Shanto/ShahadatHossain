@@ -79,7 +79,7 @@
             <div class="hero-img-dot"></div>
             <div class="hero-img-dot"></div>
           </div>
-          <div class="hero-img-badge"><i class="fas fa-code"></i> Developer</div>
+          <div class="hero-img-badge" id="hero-badge"></div>
         </div>
       </div>
     </div>
@@ -344,6 +344,21 @@ function initHero(d){
   document.getElementById('social-links').innerHTML = links.map(l =>
     `<a href="${l.href}" class="soc-lnk" title="${l.label}" target="_blank" rel="noopener noreferrer"><i class="${l.icon}"></i></a>`
   ).join('')
+
+  const badge = document.getElementById('hero-badge')
+  if (badge) {
+    const badgeStrings = p.badges || [p.title || 'Developer']
+    badge.innerHTML = `<i class="fas fa-code"></i> <span id="typed-badge"></span>`
+    new Typed('#typed-badge', {
+      strings: badgeStrings,
+      typeSpeed: 50,
+      backSpeed: 28,
+      backDelay: 1800,
+      startDelay: 600,
+      loop: true,
+      showCursor: false
+    })
+  }
 }
 
 /* ────────── CAREER OBJECTIVE ────────── */
