@@ -2,7 +2,7 @@ const portfolioData = {
   personal: {
     name: "Shahadat Hossain Shanto",
     title: "Software Engineer (Laravel)",
-    tagline: "I build scalable web applications, powerful APIs, and reliable backend systems that solve real-world business problems. Specializing in Laravel and PHP, I turn complex ideas into efficient, maintainable software.",
+    tagline: "I build scalable custom web applications, powerful APIs, and reliable backend systems that solve real-world business problems. Specializing in Laravel and PHP, I turn complex ideas into efficient, maintainable software.",
     email: "info.shahadat33@gmail.com",
     phone: "01648332433",
     location: "Banasree, Rampura, Dhaka-1229",
@@ -34,13 +34,13 @@ const portfolioData = {
   services: [
     {
       icon: "fas fa-code",
-      title: "Laravel Web Development",
-      description: "Full-stack web applications built with PHP Laravel — clean architecture, RESTful APIs, Eloquent ORM, and robust backend logic."
+      title: "Custom Website & Laravel Development",
+      description: "Custom business websites and Laravel web applications built around your goals, with responsive interfaces, reliable PHP backends, and maintainable code."
     },
     {
       icon: "fas fa-paint-brush",
-      title: "Frontend UI Design",
-      description: "Responsive, user-friendly interfaces using HTML, CSS, Bootstrap, JavaScript, Alpine.js, and jQuery."
+      title: "Website UI & Frontend Design",
+      description: "Website design and responsive frontend development using HTML, CSS, Bootstrap, JavaScript, Alpine.js, and jQuery."
     },
     {
       icon: "fas fa-database",

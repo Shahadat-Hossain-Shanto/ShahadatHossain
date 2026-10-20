@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shahadat Hossain Shanto | Laravel & PHP Software Engineer</title>
-  <meta name="description" content="Shahadat Hossain Shanto is a Laravel and PHP software engineer in Dhaka, Bangladesh, working on projects of all kinds—from new web applications to APIs and existing-system improvements." />
+  <title>Shahadat Hossain Shanto | Custom Websites & Laravel Developer</title>
+  <meta name="description" content="Shahadat Hossain Shanto builds custom websites and Laravel web applications in Dhaka, Bangladesh, plus PHP backends, REST APIs, and integrations." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Shahadat Hossain Shanto" />
   <meta name="theme-color" content="#080d16" />
@@ -13,8 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link href="style.css" rel="stylesheet"/>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080d16'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-weight='700' font-size='13' fill='%2300c8ff' letter-spacing='-1'%3ESH.%3C/text%3E%3C/svg%3E" />
-  <meta property="og:title" content="Shahadat Hossain Shanto | Laravel & PHP Software Engineer" />
-  <meta property="og:description" content="Laravel and PHP software engineer in Dhaka, Bangladesh, working on projects of all kinds—from new web applications to APIs and existing-system improvements." />
+  <meta property="og:title" content="Shahadat Hossain Shanto | Custom Websites & Laravel Developer" />
+  <meta property="og:description" content="Custom websites and Laravel web applications by Shahadat Hossain Shanto, a web developer in Dhaka, Bangladesh." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Shahadat Hossain Shanto — Portfolio" />
@@ -24,8 +24,9 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Shahadat Hossain Shanto",
-    "jobTitle": "Software Engineer (Laravel)",
-    "description": "Laravel and PHP software engineer in Dhaka, Bangladesh, working on custom web applications, REST APIs, integrations, and improvements to existing systems.",
+    "alternateName": "Shahadat Shanto",
+    "jobTitle": "Laravel and PHP Web Developer",
+    "description": "Dhaka-based web developer building custom websites, Laravel applications, PHP backends, REST APIs, and integrations.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Dhaka",
@@ -40,8 +41,11 @@
       "Laravel",
       "PHP",
       "MySQL",
+      "Custom website development",
+      "Business website development",
+      "Website design and frontend development",
+      "Laravel web applications",
       "REST API development",
-      "Custom web applications",
       "API integrations",
       "Application deployment"
     ]
@@ -94,11 +98,11 @@
         <div class="hero-tag"><span class="dot"></span> Available for opportunities <span class="hero-location">· Dhaka, Bangladesh</span></div>
         <h1 class="hero-name" id="hero-name">Shahadat Hossain <span class="acc">Shanto</span></h1>
         <p class="hero-role"><span class="hero-role-label">SOFTWARE ENGINEER</span><span class="hero-role-separator">/</span><span id="hero-role-text" aria-live="off">Laravel &amp; PHP</span></p>
-        <p class="hero-bio" id="hero-bio">I’m Shahadat Hossain Shanto, a Dhaka-based Laravel and PHP software engineer. I take on projects of all kinds—from new web applications and REST APIs to integrations and improvements to existing systems.</p>
+        <p class="hero-bio" id="hero-bio">I’m Shahadat Hossain Shanto, a Dhaka-based web developer building custom websites and web applications with Laravel and PHP—from new builds to APIs, integrations, and improvements to existing systems.</p>
         <div class="hero-specialties" aria-label="Areas of expertise">
           <span><i class="fas fa-code" aria-hidden="true"></i> Laravel &amp; PHP</span>
           <span><i class="fas fa-plug" aria-hidden="true"></i> APIs &amp; integrations</span>
-          <span><i class="fas fa-layer-group" aria-hidden="true"></i> New builds &amp; improvements</span>
+          <span><i class="fas fa-layer-group" aria-hidden="true"></i> Custom websites &amp; web apps</span>
         </div>
         <div class="hero-facts" id="hero-facts" aria-label="Career highlights">
           <div><strong>25<span>+</span></strong><span>projects built</span></div>
@@ -137,7 +141,8 @@
     <span>PHP 8.x Expert</span>
     <span>REST API Designer</span>
     <span>MySQL Architect</span>
-    <span>Custom Laravel Apps</span>
+    <span>Custom Website Development</span>
+    <span>Laravel Web Applications</span>
     <span>Application Maintenance</span>
     <span>VPS Deployment</span>
     <span>Redis Caching</span>
@@ -371,7 +376,7 @@ function initHero(d){
   const last = parts.slice(1).join(' ')
   document.getElementById('hero-name').innerHTML = first + ' <span class="acc">' + last + '</span>'
   document.getElementById('hero-bio').textContent = p.tagline
-  document.title = p.name + ' | Laravel & PHP Software Engineer'
+  document.title = p.name + ' | Custom Websites & Laravel Developer'
   const projects = d.stats.find(stat => /projects built/i.test(stat.label))
   const experience = d.stats.find(stat => /years experience/i.test(stat.label))
   document.getElementById('hero-facts').innerHTML = [
@@ -381,7 +386,7 @@ function initHero(d){
   ].filter(Boolean).join('')
 
   const role = document.getElementById('hero-role-text')
-  const roleLabels = ['Laravel Web Applications', 'REST API Development', 'Backend Engineering', 'Application Improvements']
+  const roleLabels = ['Custom Website Development', 'Laravel Web Applications', 'REST API Development', 'Backend Engineering', 'Application Improvements']
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     let roleIndex = 0
     window.setInterval(() => {
