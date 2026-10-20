@@ -3,7 +3,7 @@ const portfolioData = {
     name: "Shahadat Hossain Shanto",
     title: "Software Engineer (Laravel)",
     tagline: "I build scalable web applications, powerful APIs, and reliable backend systems that solve real-world business problems. Specializing in Laravel and PHP, I turn complex ideas into efficient, maintainable software.",
-    email: "shahadathossain1563@gmail.com",
+    email: "info.shahadat33@gmail.com",
     phone: "01648332433",
     location: "Banasree, Rampura, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
