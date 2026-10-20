@@ -151,6 +151,13 @@ const portfolioData = {
       live: "https://adriyancre.com"
     },
     {
+      title: "PaiBridge – Global B2B Marketplace",
+      description: "A global B2B platform connecting buyers, suppliers, and sellers with product listings, merchant storefronts, and quotation requests.",
+      tags: ["Laravel", "MySQL", "RESTful APIs", "JavaScript"],
+      repo: "",
+      live: "https://paibridge.com"
+    },
+    {
       title: "Digital Signage System",
       description: "Manage and display dynamic content (ads, notices, videos, images) across multiple screens in real-time with content scheduling and playlist management.",
       tags: ["Laravel", "MySQL", "Bootstrap", "JavaScript"],
