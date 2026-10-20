@@ -5,7 +5,7 @@ const portfolioData = {
     tagline: "I build scalable web applications, powerful APIs, and reliable backend systems that solve real-world business problems. Specializing in Laravel and PHP, I turn complex ideas into efficient, maintainable software.",
     email: "shahadathossain1563@gmail.com",
     phone: "01648332433",
-    location: "Nikunja-2, Khilkhet, Dhaka-1229",
+    location: "Banasree, Rampura, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
     linkedin: "https://www.linkedin.com/in/shahadat-hossain-shanto-128162318/",
     avatar: "img/me.jpeg"
