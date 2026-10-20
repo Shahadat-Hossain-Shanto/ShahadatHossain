@@ -239,7 +239,7 @@ section{position:relative;z-index:1}
 .game-container:hover{border-color:rgba(0,200,255,.3);box-shadow:0 20px 40px rgba(0,0,0,.3)}
 .game-title{font-size:1.4rem;font-weight:700;margin-bottom:8px}
 .game-sub{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-bottom:20px}
-#gameCanvas{background:var(--bg);border:1px solid var(--border);border-radius:6px;cursor:crosshair;display:block;margin:0 auto 16px;box-shadow:0 0 30px rgba(0,200,255,.1)}
+#gameCanvas{background:var(--bg);border:1px solid var(--border);border-radius:6px;cursor:crosshair;display:block;margin:0 0 10px;box-shadow:0 0 30px rgba(0,200,255,.1)}
 .game-stats{display:flex;justify-content:center;gap:30px;margin-bottom:16px;font-family:var(--mono);font-size:.85rem;flex-wrap:wrap}
 .game-stat{display:flex;align-items:center;gap:6px}
 .game-stat i{font-size:.9rem}
@@ -330,7 +330,7 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--border);font-fa
   .counter-num{font-size:1.5rem}
   .strength-grid{grid-template-columns:1fr}
   .game-container{padding:20px}
-  #gameCanvas{width:100%!important;max-width:360px}
+  #gameCanvas{width:100%!important;max-width:none}
   .hero-img-badge{font-size:.74rem;padding:9px 14px}
   .hero-img-dots{display:none}
 }
