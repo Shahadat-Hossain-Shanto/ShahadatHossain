@@ -519,11 +519,11 @@ function initContact(d){
   document.getElementById('contact-list').innerHTML = items.map(i => `
     <a href="${i.href}" class="c-item" ${i.self ? '' : 'target="_blank" rel="noopener noreferrer"'}>
       <div class="c-icon"><i class="${i.icon}"></i></div>
-      <div>
+      <div class="c-content">
         <div class="c-label">${i.label}</div>
         <div class="c-val">${i.val}</div>
       </div>
-      <i class="fas fa-arrow-right ms-auto" style="color:var(--muted);font-size:.72rem;"></i>
+      <i class="fas fa-arrow-right c-arrow" aria-hidden="true"></i>
     </a>`).join('')
 }
 
