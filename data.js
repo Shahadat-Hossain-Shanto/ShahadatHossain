@@ -1,6 +1,6 @@
 const portfolioData = {
   personal: {
-    name: "Md Shahadat Hossain",
+    name: "Shahadat Hossain Shanto",
     title: "Software Engineer (Laravel)",
     tagline: "Building scalable web applications with Laravel, MySQL & modern frontend.",
     email: "shahadathossain1563@gmail.com",
