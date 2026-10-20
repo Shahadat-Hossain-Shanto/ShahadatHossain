@@ -78,7 +78,7 @@ const portfolioData = {
     {
       role: "Executive Laravel Developer",
       company: "PaiMart by PaiNest",
-      location: "Dhaka, Bangladesh",
+      location: "Banasree, Dhaka, Bangladesh",
       period: "June 2026 – Present",
       type: "Full-time",
       points: [
@@ -93,7 +93,7 @@ const portfolioData = {
     {
       role: "Laravel Developer",
       company: "Softvence Delta",
-      location: "Dhaka, Bangladesh",
+      location: "Banasree, Dhaka, Bangladesh",
       period: "December 2025 – May 2026",
       type: "Full-time",
       points: [
@@ -108,7 +108,7 @@ const portfolioData = {
     {
       role: "Software Engineer (Laravel)",
       company: "Inovex Idea Solution Limited",
-      location: "Middle-Badda, Dhaka",
+      location: "Middle-Badda, Dhaka, Bangladesh",
       period: "January 2025 – November 2025",
       type: "Full-time",
       points: [
@@ -121,7 +121,7 @@ const portfolioData = {
     {
       role: "Software Engineer Internship (Laravel)",
       company: "Inovex Idea Solution Limited",
-      location: "Middle-Badda, Dhaka",
+      location: "Middle-Badda, Dhaka, Bangladesh",
       period: "July 2024 – December 2024",
       type: "Internship",
       points: [

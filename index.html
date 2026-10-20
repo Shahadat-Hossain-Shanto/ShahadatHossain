@@ -189,11 +189,7 @@
     <p class="sec-label">Work History</p>
     <h2 class="sec-title">Experience</h2>
     <div class="sec-divider"></div>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="timeline" id="exp-timeline"></div>
-      </div>
-    </div>
+    <div class="timeline" id="exp-timeline"></div>
   </div>
 </section>
 
@@ -425,14 +421,23 @@ function initServices(d){
 /* ────────── EXPERIENCE ────────── */
 function initExp(d){
   document.getElementById('exp-timeline').innerHTML = d.experiences.map((e, i) => `
-    <div class="exp-item fu" style="transition-delay:${i * 0.12}s">
-      <div class="exp-dot"></div>
-      <span class="exp-badge">${e.type}</span>
-      <div class="exp-role">${e.role}</div>
-      <div class="exp-co">${e.company}</div>
-      <div class="exp-meta">${e.location} &nbsp;·&nbsp; ${e.period}</div>
-      <ul class="exp-pts">${e.points.map(p => `<li>${p}</li>`).join('')}</ul>
-    </div>`).join('')
+    <article class="exp-item fu" style="transition-delay:${i * 0.12}s">
+      <div class="exp-dot" aria-hidden="true"></div>
+      <div class="exp-side">
+        <span class="exp-period">${e.period}</span>
+        <span class="exp-badge">${e.type}</span>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-head">
+          <div>
+            <h3 class="exp-role">${e.role}</h3>
+            <div class="exp-co">${e.company}</div>
+          </div>
+          <span class="exp-location"><i class="fas fa-location-dot" aria-hidden="true"></i> ${e.location}</span>
+        </div>
+        <ul class="exp-pts">${e.points.map(p => `<li>${p}</li>`).join('')}</ul>
+      </div>
+    </article>`).join('')
 }
 
 /* ────────── PROJECTS ────────── */
