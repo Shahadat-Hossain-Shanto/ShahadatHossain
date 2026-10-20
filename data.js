@@ -2,23 +2,13 @@ const portfolioData = {
   personal: {
     name: "Shahadat Hossain Shanto",
     title: "Software Engineer (Laravel)",
-    tagline: "Building scalable web applications with Laravel, MySQL & modern frontend.",
+    tagline: "I build scalable web applications, powerful APIs, and reliable backend systems that solve real-world business problems. Specializing in Laravel and PHP, I turn complex ideas into efficient, maintainable software.",
     email: "shahadathossain1563@gmail.com",
     phone: "01648332433",
     location: "Nikunja-2, Khilkhet, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
     linkedin: "https://www.linkedin.com/in/shahadat-hossain-shanto-128162318/",
-    avatar: "img/me.jpeg",
-    badges: [
-        "Jr. Software Engineer",
-        "Laravel Developer",
-        "Full Stack Engineer",
-        "Backend Systems Architect",
-        "RESTful API Specialist",
-        "Database Design Engineer",
-        "Web Application Architect",
-        "Cloud & DevOps Practitioner"
-    ]
+    avatar: "img/me.jpeg"
   },
 
   careerObjective: "Results-driven Laravel Developer with experience in building scalable web applications, RESTful APIs, and database-driven solutions. Seeking a challenging position where I can leverage my expertise in backend development, frontend technologies, and software architecture to deliver high-quality digital products while continuously expanding my technical and leadership skills.",
@@ -69,8 +59,8 @@ const portfolioData = {
     },
     {
       icon: "fas fa-chart-line",
-      title: "ERP & POS Systems",
-      description: "Custom ERP, POS, inventory, and business management systems with real-time tracking, multi-level roles, and reporting."
+      title: "Custom Laravel Applications",
+      description: "Purpose-built Laravel applications for varied project needs, with maintainable architecture, thoughtful workflows, and reliable data management."
     },
     {
       icon: "fas fa-lock",
