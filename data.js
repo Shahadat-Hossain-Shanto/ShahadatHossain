@@ -4,7 +4,7 @@ const portfolioData = {
     title: "Software Engineer (Laravel)",
     tagline: "Building scalable web applications with Laravel, MySQL & modern frontend.",
     email: "shahadathossain1563@gmail.com",
-    phone: "01620925191",
+    phone: "01648332433",
     location: "Nikunja-2, Khilkhet, Dhaka-1229",
     github: "https://github.com/Shahadat-Hossain-Shanto",
     linkedin: "https://www.linkedin.com/in/shahadat-hossain-shanto-128162318/",
@@ -86,18 +86,33 @@ const portfolioData = {
 
   experiences: [
     {
+      role: "Executive Laravel Developer",
+      company: "PaiMart by PaiNest",
+      location: "Dhaka, Bangladesh",
+      period: "June 2026 – Present",
+      type: "Full-time",
+      points: [
+        "Developing and maintaining scalable Laravel applications for the PaiNest ecosystem.",
+        "Building and integrating RESTful APIs to support seamless communication between web and mobile platforms.",
+        "Designing and optimizing database schemas, queries, migrations, and application performance.",
+        "Implementing secure authentication, role-based access control, and business-specific application features.",
+        "Managing application deployment, server configuration, debugging, and production issue resolution.",
+        "Collaborating with cross-functional teams to deliver reliable, maintainable, and business-focused software solutions."
+      ]
+    },
+    {
       role: "Laravel Developer",
       company: "Softvence Delta",
       location: "Dhaka, Bangladesh",
-      period: "December 2025 – Present",
+      period: "December 2025 – May 2026",
       type: "Full-time",
       points: [
-        "Developing and maintaining scalable Laravel applications with clean, well-structured MVC architecture.",
-        "Building and consuming RESTful APIs integrated with mobile and third-party platforms.",
-        "Designing normalized database schemas, writing optimized queries, and managing migrations and seeders.",
-        "Implementing role-based access control, authentication (Sanctum/Passport), and application security best practices.",
-        "Deploying and managing applications on VPS — configuring Nginx, SSL (Let's Encrypt), Supervisor, and UFW firewall.",
-        "Collaborating with frontend and mobile teams to deliver seamless, user-focused features on schedule."
+        "Developed and maintained scalable Laravel applications using clean, well-structured MVC architecture.",
+        "Built and integrated RESTful APIs for mobile applications and third-party platforms.",
+        "Designed normalized database schemas, optimized queries, and managed migrations and seeders.",
+        "Implemented role-based access control, authentication using Sanctum and Passport, and application security best practices.",
+        "Deployed and managed applications on VPS environments, configuring Nginx, Let's Encrypt SSL, Supervisor, and UFW firewall.",
+        "Collaborated with frontend and mobile teams to deliver reliable, user-focused features."
       ]
     },
     {
@@ -107,10 +122,10 @@ const portfolioData = {
       period: "January 2025 – November 2025",
       type: "Full-time",
       points: [
-        "Developing and maintaining scalable web applications using Laravel, MySQL, JavaScript, AJAX, jQuery, HTML, CSS, and Bootstrap.",
-        "Collaborating with teams to deliver efficient, user-friendly solutions.",
-        "Implementing database structures, optimizing queries, and ensuring application performance.",
-        "Contributing to full-stack development, from frontend UI to backend logic and VPS deployment."
+        "Developed and maintained web applications using Laravel, MySQL, JavaScript, AJAX, jQuery, HTML, CSS, and Bootstrap.",
+        "Collaborated with development teams to deliver efficient and user-friendly solutions.",
+        "Implemented database structures, optimized queries, and improved application performance.",
+        "Contributed to full-stack development, from frontend interfaces to backend logic and VPS deployment."
       ]
     },
     {
@@ -120,8 +135,8 @@ const portfolioData = {
       period: "July 2024 – December 2024",
       type: "Internship",
       points: [
-        "Contributed to developing multiple web applications using Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript, AJAX, and jQuery.",
-        "Collaborated with a team to build responsive, user-friendly interfaces.",
+        "Contributed to developing web applications using Laravel, MySQL, HTML, CSS, Bootstrap, JavaScript, AJAX, and jQuery.",
+        "Collaborated with team members to build responsive, user-friendly interfaces.",
         "Gained hands-on experience in full-stack development, database management, and debugging."
       ]
     }
