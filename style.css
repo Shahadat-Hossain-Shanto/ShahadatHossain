@@ -232,7 +232,8 @@ section{position:relative;z-index:1}
 
 /* ── GAME ── */
 #game{padding:80px 0;background:var(--surface)}
-.game-container{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:30px;text-align:center;position:relative;overflow:hidden}
+#game .row.g-4>[class*="col-"]{display:flex}
+.game-container{display:flex;flex-direction:column;width:100%;height:100%;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:30px;text-align:center;position:relative;overflow:hidden}
 .game-container::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent));opacity:0;transition:opacity .3s}
 .game-container:hover::before{opacity:1}
 .game-container:hover{border-color:rgba(0,200,255,.3);box-shadow:0 20px 40px rgba(0,0,0,.3)}
@@ -251,6 +252,24 @@ section{position:relative;z-index:1}
 .game-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
 .game-msg{font-family:var(--mono);font-size:.85rem;color:var(--accent);margin-top:12px;min-height:24px}
 .game-instructions{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:10px;line-height:1.6}
+.memory-game .game-title i{margin-right:8px;color:var(--accent)}
+.memory-stats{display:flex;justify-content:center;gap:clamp(20px,5vw,42px);margin:0 auto 18px}
+.memory-stats>div{display:grid;gap:3px}
+.memory-stats span{color:var(--accent);font-family:var(--mono);font-weight:700;font-size:1.15rem}
+.memory-stats small{color:var(--muted);font-family:var(--mono);font-size:.6rem;letter-spacing:1px;text-transform:uppercase}
+.memory-time-low{color:var(--danger)!important;animation:memory-tick .5s ease-in-out infinite alternate}
+@keyframes memory-tick{to{transform:scale(1.12)}}
+.memory-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;flex:0 0 auto;width:100%;max-width:420px;margin:0 auto 18px}
+.memory-card{position:relative;display:grid;place-items:center;aspect-ratio:1;min-width:0;padding:0;border:1px solid rgba(0,200,255,.15);border-radius:10px;background:linear-gradient(145deg,#14243a,#0d1827);color:var(--accent);font-size:1rem;font-weight:700;cursor:pointer;overflow:hidden;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
+.memory-card:hover:not(.is-revealed):not(.is-matched){transform:translateY(-3px);border-color:rgba(0,200,255,.55);box-shadow:0 7px 16px rgba(0,0,0,.2)}
+.memory-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.memory-card-face{display:none}
+.memory-card.is-revealed,.memory-card.is-matched{background:linear-gradient(145deg,rgba(0,120,255,.2),rgba(0,200,255,.08));border-color:rgba(0,200,255,.5);box-shadow:inset 0 0 20px rgba(0,200,255,.06)}
+.memory-card.is-revealed .memory-card-back,.memory-card.is-matched .memory-card-back{display:none}
+.memory-card.is-revealed .memory-card-face,.memory-card.is-matched .memory-card-face{display:block;font-size:clamp(1.5rem,4vw,2.2rem);animation:memory-pop .22s ease-out}
+.memory-card.is-matched{border-color:rgba(0,217,163,.45);background:linear-gradient(145deg,rgba(0,217,163,.15),rgba(0,200,255,.06))}
+.memory-msg{min-height:42px;display:flex;align-items:center;justify-content:center}
+@keyframes memory-pop{from{transform:scale(.55);opacity:.4}to{transform:scale(1);opacity:1}}
 
 /* ── CONTACT ── */
 #contact{padding:100px 0;background:radial-gradient(ellipse 50% 70% at 100% 50%,rgba(0,120,255,.07),transparent 75%)}

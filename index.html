@@ -272,10 +272,10 @@
 <section id="game">
   <div class="container">
     <p class="sec-label">Interactive</p>
-    <h2 class="sec-title">Bug Hunter Game</h2>
+    <h2 class="sec-title">Take a Quick Break</h2>
     <div class="sec-divider"></div>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+    <div class="row g-4">
+      <div class="col-xl-6">
         <div class="game-container">
           <div class="game-title"><i class="fas fa-gamepad" style="color:var(--accent);margin-right:8px"></i>Bug Hunter</div>
           <div class="game-sub">Click the bugs before they escape! Avoid the skulls. Test your debugging reflexes.</div>
@@ -295,6 +295,22 @@
           <div class="game-instructions">
             <i class="fas fa-info-circle"></i> Normal bugs = +10 to +30 pts | Skull bugs = -10 pts & lose a life | Missed bugs = lose a life
           </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="game-container memory-game" id="memory-game">
+          <div class="game-title"><i class="fas fa-brain" aria-hidden="true"></i> Emoji Match</div>
+          <div class="game-sub">Find all 8 matching pairs before the 60-second timer runs out.</div>
+          <div class="memory-stats" aria-live="polite">
+            <div><span id="memory-moves">0</span><small>Moves</small></div>
+            <div><span id="memory-pairs">0 / 8</span><small>Pairs</small></div>
+            <div><span id="memory-time">60</span><small>Seconds</small></div>
+          </div>
+          <div class="memory-board" id="memory-board" role="group" aria-label="Emoji matching cards"></div>
+          <div class="game-controls">
+            <button class="game-btn primary" id="memory-reset" type="button"><i class="fas fa-shuffle" aria-hidden="true"></i> Shuffle &amp; Play</button>
+          </div>
+          <div class="game-msg memory-msg" id="memory-msg" role="status" aria-live="polite">Pick any two cards to start!</div>
         </div>
       </div>
     </div>
@@ -981,6 +997,119 @@ function initGame() {
   drawBackground()
 }
 
+/* ────────── EMOJI MEMORY MATCH ────────── */
+function initMemoryGame() {
+  const board = document.getElementById('memory-board')
+  if (!board) return
+  const movesEl = document.getElementById('memory-moves')
+  const pairsEl = document.getElementById('memory-pairs')
+  const timeEl = document.getElementById('memory-time')
+  const msgEl = document.getElementById('memory-msg')
+  const resetBtn = document.getElementById('memory-reset')
+  const symbols = ['🐼', '🍓', '🦊', '🌈', '🐸', '🍩', '🐙', '⭐']
+  let firstCard = null
+  let locked = false
+  let moves = 0
+  let matches = 0
+  let seconds = 60
+  let timer = null
+  let finished = false
+
+  function finish(message) {
+    finished = true
+    locked = true
+    clearInterval(timer)
+    timer = null
+    msgEl.textContent = message
+  }
+
+  function reset() {
+    clearInterval(timer)
+    firstCard = null
+    locked = false
+    moves = 0
+    matches = 0
+    seconds = 60
+    finished = false
+    movesEl.textContent = '0'
+    pairsEl.textContent = '0 / 8'
+    timeEl.textContent = '60'
+    timeEl.classList.remove('memory-time-low')
+    msgEl.textContent = 'Pick any two cards to start!'
+    board.innerHTML = ''
+
+    const deck = [...symbols, ...symbols]
+    for (let i = deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      const current = deck[i]
+      deck[i] = deck[j]
+      deck[j] = current
+    }
+    deck.forEach((symbol, index) => {
+      const card = document.createElement('button')
+      card.type = 'button'
+      card.className = 'memory-card'
+      card.dataset.symbol = symbol
+      card.setAttribute('aria-label', `Card ${index + 1}, hidden`)
+      card.innerHTML = '<span class="memory-card-back" aria-hidden="true">?</span><span class="memory-card-face" aria-hidden="true"></span>'
+      card.addEventListener('click', () => reveal(card, index))
+      board.appendChild(card)
+    })
+  }
+
+  function reveal(card, index) {
+    if (locked || finished || card.classList.contains('is-revealed') || card.classList.contains('is-matched')) return
+
+    if (!timer) {
+      timer = setInterval(() => {
+        seconds--
+        timeEl.textContent = seconds
+        if (seconds <= 10) timeEl.classList.add('memory-time-low')
+        if (seconds <= 0) finish('Time is up! Shuffle and give it another try.')
+      }, 1000)
+    }
+
+    card.classList.add('is-revealed')
+    card.querySelector('.memory-card-face').textContent = card.dataset.symbol
+    card.setAttribute('aria-label', `Card ${index + 1}, ${card.dataset.symbol}`)
+
+    if (!firstCard) {
+      firstCard = card
+      return
+    }
+
+    moves++
+    movesEl.textContent = moves
+    if (firstCard.dataset.symbol === card.dataset.symbol) {
+      firstCard.classList.add('is-matched')
+      card.classList.add('is-matched')
+      firstCard.setAttribute('aria-label', `Matched ${card.dataset.symbol}`)
+      card.setAttribute('aria-label', `Matched ${card.dataset.symbol}`)
+      firstCard = null
+      matches++
+      pairsEl.textContent = `${matches} / 8`
+      if (matches === symbols.length) finish(`You did it in ${moves} moves with ${seconds} seconds left! 🎉`)
+      return
+    }
+
+    locked = true
+    const previousCard = firstCard
+    firstCard = null
+    window.setTimeout(() => {
+      previousCard.classList.remove('is-revealed')
+      card.classList.remove('is-revealed')
+      previousCard.querySelector('.memory-card-face').textContent = ''
+      card.querySelector('.memory-card-face').textContent = ''
+      previousCard.setAttribute('aria-label', 'Hidden card')
+      card.setAttribute('aria-label', 'Hidden card')
+      locked = false
+    }, 700)
+  }
+
+  resetBtn.addEventListener('click', reset)
+  reset()
+}
+
 /* ────────── BOOT ────────── */
 document.addEventListener('DOMContentLoaded', () => {
   const d = portfolioData
@@ -997,6 +1126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFooter(d)
   initParticles()
   initGame()
+  initMemoryGame()
   setTimeout(() => { initObserver() }, 150)
   initActiveNav()
   initBurger()
